@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-hr-ai"
+version = "0.1.0"
+description = "Workforce Intelligence & Upskilling Platform"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["hrai*", "app*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["notebooks", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "PD"]
+ignore = ["E501", "PD011"]  # black owns line length; PD011 misfires on .values dicts
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B", "SIM"]

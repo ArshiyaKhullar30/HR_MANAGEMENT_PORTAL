@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-08-27T20:38:48.996212+00:00",
+  "run_id": "72e7b30d54d6",
+  "mode": "report",
+  "stage": "raw",
+  "datasets": {
+    "employee_attrition": {
+      "dataset": "employee_attrition",
+      "schema": "employee_attrition_raw",
+      "rows": 1470,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "hr_performance_engagement": {
+      "dataset": "hr_performance_engagement",
+      "schema": "hr_performance_engagement_raw",
+      "rows": 3150,
+      "passed": false,
+      "failure_count": 1198,
+      "failures": [
+        {
+          "check": "ExitDate is populated but EmployeeStatus is not a terminated status",
+          "column": null,
+          "scope": "dataframe",
+          "count": 1198,
+          "example": "6"
+        }
+      ]
+    },
+    "occupation_data": {
+      "dataset": "occupation_data",
+      "schema": "occupation_data",
+      "rows": 1016,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "essential_skills": {
+      "dataset": "essential_skills",
+      "schema": "essential_skills",
+      "rows": 18200,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "software_skills": {
+      "dataset": "software_skills",
+      "schema": "software_skills",
+      "rows": 31821,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    }
+  }
+}

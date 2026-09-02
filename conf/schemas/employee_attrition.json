@@ -1,0 +1,1215 @@
+{
+  "name": "employee_attrition",
+  "rows": 1470,
+  "columns": 35,
+  "duplicate_rows": 0,
+  "total_missing_cells": 0,
+  "constant_columns": [
+    "EmployeeCount",
+    "Over18",
+    "StandardHours"
+  ],
+  "candidate_keys": [
+    "EmployeeNumber"
+  ],
+  "id_like_columns": [],
+  "columns_detail": [
+    {
+      "name": "Age",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 43,
+      "unique_pct": 2.93,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        41,
+        49,
+        37,
+        33,
+        27
+      ],
+      "numeric": {
+        "min": 18.0,
+        "25%": 30.0,
+        "50%": 36.0,
+        "75%": 43.0,
+        "max": 60.0,
+        "mean": 36.9238,
+        "std": 9.1354
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Attrition",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.14,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Yes",
+        "No"
+      ],
+      "numeric": null,
+      "categories": {
+        "No": 1233,
+        "Yes": 237
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "BusinessTravel",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.2,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Travel_Rarely",
+        "Travel_Frequently",
+        "Non-Travel"
+      ],
+      "numeric": null,
+      "categories": {
+        "Travel_Rarely": 1043,
+        "Travel_Frequently": 277,
+        "Non-Travel": 150
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "DailyRate",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 886,
+      "unique_pct": 60.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        1102,
+        279,
+        1373,
+        1392,
+        591
+      ],
+      "numeric": {
+        "min": 102.0,
+        "25%": 465.0,
+        "50%": 802.0,
+        "75%": 1157.0,
+        "max": 1499.0,
+        "mean": 802.4857,
+        "std": 403.5091
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Department",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.2,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Sales",
+        "Research & Development",
+        "Human Resources"
+      ],
+      "numeric": null,
+      "categories": {
+        "Research & Development": 961,
+        "Sales": 446,
+        "Human Resources": 63
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "DistanceFromHome",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 29,
+      "unique_pct": 1.97,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        1,
+        8,
+        2,
+        3,
+        24
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 7.0,
+        "75%": 14.0,
+        "max": 29.0,
+        "mean": 9.1925,
+        "std": 8.1069
+      },
+      "categories": {
+        "2": 211,
+        "1": 208,
+        "10": 86,
+        "9": 85,
+        "3": 84,
+        "7": 84,
+        "8": 80,
+        "5": 65,
+        "4": 64,
+        "6": 59,
+        "16": 32,
+        "11": 29,
+        "24": 28,
+        "23": 27,
+        "29": 27,
+        "15": 26,
+        "18": 26,
+        "26": 25,
+        "25": 25,
+        "20": 25,
+        "28": 23,
+        "19": 22,
+        "14": 21,
+        "12": 20,
+        "17": 20,
+        "22": 19,
+        "13": 19,
+        "21": 18,
+        "27": 12
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Education",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.34,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        2,
+        1,
+        4,
+        3,
+        5
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 5.0,
+        "mean": 2.9129,
+        "std": 1.0242
+      },
+      "categories": {
+        "3": 572,
+        "4": 398,
+        "2": 282,
+        "1": 170,
+        "5": 48
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EducationField",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 6,
+      "unique_pct": 0.41,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Life Sciences",
+        "Other",
+        "Medical",
+        "Marketing",
+        "Technical Degree"
+      ],
+      "numeric": null,
+      "categories": {
+        "Life Sciences": 606,
+        "Medical": 464,
+        "Marketing": 159,
+        "Technical Degree": 132,
+        "Other": 82,
+        "Human Resources": 27
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EmployeeCount",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1,
+      "unique_pct": 0.07,
+      "is_constant": true,
+      "is_candidate_key": false,
+      "sample_values": [
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 1.0,
+        "75%": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "categories": {
+        "1": 1470
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EmployeeNumber",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1470,
+      "unique_pct": 100.0,
+      "is_constant": false,
+      "is_candidate_key": true,
+      "sample_values": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 491.25,
+        "50%": 1020.5,
+        "75%": 1555.75,
+        "max": 2068.0,
+        "mean": 1024.8653,
+        "std": 602.0243
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EnvironmentSatisfaction",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 4.0,
+        "mean": 2.7218,
+        "std": 1.0931
+      },
+      "categories": {
+        "3": 453,
+        "4": 446,
+        "2": 287,
+        "1": 284
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Gender",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.14,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Female",
+        "Male"
+      ],
+      "numeric": null,
+      "categories": {
+        "Male": 882,
+        "Female": 588
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "HourlyRate",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 71,
+      "unique_pct": 4.83,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        94,
+        61,
+        92,
+        56,
+        40
+      ],
+      "numeric": {
+        "min": 30.0,
+        "25%": 48.0,
+        "50%": 66.0,
+        "75%": 83.75,
+        "max": 100.0,
+        "mean": 65.8912,
+        "std": 20.3294
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "JobInvolvement",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        3,
+        2,
+        4,
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 3.0,
+        "max": 4.0,
+        "mean": 2.7299,
+        "std": 0.7116
+      },
+      "categories": {
+        "3": 868,
+        "2": 375,
+        "4": 144,
+        "1": 83
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "JobLevel",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.34,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 2.0,
+        "75%": 3.0,
+        "max": 5.0,
+        "mean": 2.0639,
+        "std": 1.1069
+      },
+      "categories": {
+        "1": 543,
+        "2": 534,
+        "3": 218,
+        "4": 106,
+        "5": 69
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "JobRole",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 9,
+      "unique_pct": 0.61,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Sales Executive",
+        "Research Scientist",
+        "Laboratory Technician",
+        "Manufacturing Director",
+        "Healthcare Representative"
+      ],
+      "numeric": null,
+      "categories": {
+        "Sales Executive": 326,
+        "Research Scientist": 292,
+        "Laboratory Technician": 259,
+        "Manufacturing Director": 145,
+        "Healthcare Representative": 131,
+        "Manager": 102,
+        "Sales Representative": 83,
+        "Research Director": 80,
+        "Human Resources": 52
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "JobSatisfaction",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 4.0,
+        "mean": 2.7286,
+        "std": 1.1028
+      },
+      "categories": {
+        "4": 459,
+        "3": 442,
+        "1": 289,
+        "2": 280
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "MaritalStatus",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.2,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Single",
+        "Married",
+        "Divorced"
+      ],
+      "numeric": null,
+      "categories": {
+        "Married": 673,
+        "Single": 470,
+        "Divorced": 327
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "MonthlyIncome",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1349,
+      "unique_pct": 91.77,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        5993,
+        5130,
+        2090,
+        2909,
+        3468
+      ],
+      "numeric": {
+        "min": 1009.0,
+        "25%": 2911.0,
+        "50%": 4919.0,
+        "75%": 8379.0,
+        "max": 19999.0,
+        "mean": 6502.9313,
+        "std": 4707.9568
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "MonthlyRate",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1427,
+      "unique_pct": 97.07,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        19479,
+        24907,
+        2396,
+        23159,
+        16632
+      ],
+      "numeric": {
+        "min": 2094.0,
+        "25%": 8047.0,
+        "50%": 14235.5,
+        "75%": 20461.5,
+        "max": 26999.0,
+        "mean": 14313.1034,
+        "std": 7117.786
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "NumCompaniesWorked",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 10,
+      "unique_pct": 0.68,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        8,
+        1,
+        6,
+        9,
+        0
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 1.0,
+        "50%": 2.0,
+        "75%": 4.0,
+        "max": 9.0,
+        "mean": 2.6932,
+        "std": 2.498
+      },
+      "categories": {
+        "1": 521,
+        "0": 197,
+        "3": 159,
+        "2": 146,
+        "4": 139,
+        "7": 74,
+        "6": 70,
+        "5": 63,
+        "9": 52,
+        "8": 49
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Over18",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1,
+      "unique_pct": 0.07,
+      "is_constant": true,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Y"
+      ],
+      "numeric": null,
+      "categories": {
+        "Y": 1470
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "OverTime",
+      "dtype": "object",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.14,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Yes",
+        "No"
+      ],
+      "numeric": null,
+      "categories": {
+        "No": 1054,
+        "Yes": 416
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "PercentSalaryHike",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 15,
+      "unique_pct": 1.02,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        11,
+        23,
+        15,
+        12,
+        13
+      ],
+      "numeric": {
+        "min": 11.0,
+        "25%": 12.0,
+        "50%": 14.0,
+        "75%": 18.0,
+        "max": 25.0,
+        "mean": 15.2095,
+        "std": 3.6599
+      },
+      "categories": {
+        "11": 210,
+        "13": 209,
+        "14": 201,
+        "12": 198,
+        "15": 101,
+        "18": 89,
+        "17": 82,
+        "16": 78,
+        "19": 76,
+        "22": 56,
+        "20": 55,
+        "21": 48,
+        "23": 28,
+        "24": 21,
+        "25": 18
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "PerformanceRating",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.14,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        3,
+        4
+      ],
+      "numeric": {
+        "min": 3.0,
+        "25%": 3.0,
+        "50%": 3.0,
+        "75%": 3.0,
+        "max": 4.0,
+        "mean": 3.1537,
+        "std": 0.3608
+      },
+      "categories": {
+        "3": 1244,
+        "4": 226
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "RelationshipSatisfaction",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 4.0,
+        "mean": 2.7122,
+        "std": 1.0812
+      },
+      "categories": {
+        "3": 459,
+        "4": 432,
+        "2": 303,
+        "1": 276
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "StandardHours",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1,
+      "unique_pct": 0.07,
+      "is_constant": true,
+      "is_candidate_key": false,
+      "sample_values": [
+        80
+      ],
+      "numeric": {
+        "min": 80.0,
+        "25%": 80.0,
+        "50%": 80.0,
+        "75%": 80.0,
+        "max": 80.0,
+        "mean": 80.0,
+        "std": 0.0
+      },
+      "categories": {
+        "80": 1470
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "StockOptionLevel",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 1.0,
+        "75%": 1.0,
+        "max": 3.0,
+        "mean": 0.7939,
+        "std": 0.8521
+      },
+      "categories": {
+        "0": 631,
+        "1": 596,
+        "2": 158,
+        "3": 85
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "TotalWorkingYears",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 40,
+      "unique_pct": 2.72,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        8,
+        10,
+        7,
+        6,
+        12
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 6.0,
+        "50%": 10.0,
+        "75%": 15.0,
+        "max": 40.0,
+        "mean": 11.2796,
+        "std": 7.7808
+      },
+      "categories": {
+        "10": 202,
+        "6": 125,
+        "8": 103,
+        "9": 96,
+        "5": 88,
+        "7": 81,
+        "1": 81,
+        "4": 63,
+        "12": 48,
+        "3": 42,
+        "15": 40,
+        "16": 37,
+        "11": 36,
+        "13": 36,
+        "21": 34,
+        "17": 33,
+        "2": 31,
+        "14": 31,
+        "20": 30,
+        "18": 27,
+        "19": 22,
+        "23": 22,
+        "22": 21,
+        "24": 18,
+        "25": 14,
+        "28": 14,
+        "26": 14,
+        "0": 11,
+        "29": 10,
+        "31": 9,
+        "32": 9,
+        "30": 7,
+        "33": 7,
+        "27": 7,
+        "36": 6,
+        "34": 5,
+        "37": 4,
+        "35": 3,
+        "40": 2,
+        "38": 1
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "TrainingTimesLastYear",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 7,
+      "unique_pct": 0.48,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        0,
+        3,
+        2,
+        5,
+        1
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 3.0,
+        "max": 6.0,
+        "mean": 2.7993,
+        "std": 1.2893
+      },
+      "categories": {
+        "2": 547,
+        "3": 491,
+        "4": 123,
+        "5": 119,
+        "1": 71,
+        "6": 65,
+        "0": 54
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "WorkLifeBalance",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.27,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        1,
+        3,
+        2,
+        4
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 3.0,
+        "max": 4.0,
+        "mean": 2.7612,
+        "std": 0.7065
+      },
+      "categories": {
+        "3": 893,
+        "2": 344,
+        "4": 153,
+        "1": 80
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "YearsAtCompany",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 37,
+      "unique_pct": 2.52,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        6,
+        10,
+        0,
+        8,
+        2
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 3.0,
+        "50%": 5.0,
+        "75%": 9.0,
+        "max": 40.0,
+        "mean": 7.0082,
+        "std": 6.1265
+      },
+      "categories": {
+        "5": 196,
+        "1": 171,
+        "3": 128,
+        "2": 127,
+        "10": 120,
+        "4": 110,
+        "7": 90,
+        "9": 82,
+        "8": 80,
+        "6": 76,
+        "0": 44,
+        "11": 32,
+        "20": 27,
+        "13": 24,
+        "15": 20,
+        "14": 18,
+        "22": 15,
+        "12": 14,
+        "21": 14,
+        "18": 13,
+        "16": 12,
+        "19": 11,
+        "17": 9,
+        "24": 6,
+        "33": 5,
+        "25": 4,
+        "26": 4,
+        "31": 3,
+        "32": 3,
+        "27": 2,
+        "36": 2,
+        "29": 2,
+        "23": 2,
+        "37": 1,
+        "40": 1,
+        "34": 1,
+        "30": 1
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "YearsInCurrentRole",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 19,
+      "unique_pct": 1.29,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        4,
+        7,
+        0,
+        2,
+        5
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 7.0,
+        "max": 18.0,
+        "mean": 4.2293,
+        "std": 3.6231
+      },
+      "categories": {
+        "2": 372,
+        "0": 244,
+        "7": 222,
+        "3": 135,
+        "4": 104,
+        "8": 89,
+        "9": 67,
+        "1": 57,
+        "6": 37,
+        "5": 36,
+        "10": 29,
+        "11": 22,
+        "13": 14,
+        "14": 11,
+        "12": 10,
+        "15": 8,
+        "16": 7,
+        "17": 4,
+        "18": 2
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "YearsSinceLastPromotion",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 16,
+      "unique_pct": 1.09,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        0,
+        1,
+        3,
+        2,
+        7
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 1.0,
+        "75%": 3.0,
+        "max": 15.0,
+        "mean": 2.1878,
+        "std": 3.2224
+      },
+      "categories": {
+        "0": 581,
+        "1": 357,
+        "2": 159,
+        "7": 76,
+        "4": 61,
+        "3": 52,
+        "5": 45,
+        "6": 32,
+        "11": 24,
+        "8": 18,
+        "9": 17,
+        "15": 13,
+        "13": 10,
+        "12": 10,
+        "14": 9,
+        "10": 6
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "YearsWithCurrManager",
+      "dtype": "int64",
+      "non_null": 1470,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 18,
+      "unique_pct": 1.22,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        5,
+        7,
+        0,
+        2,
+        6
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 7.0,
+        "max": 17.0,
+        "mean": 4.1231,
+        "std": 3.5681
+      },
+      "categories": {
+        "2": 344,
+        "0": 263,
+        "7": 216,
+        "3": 142,
+        "8": 107,
+        "4": 98,
+        "1": 76,
+        "9": 64,
+        "5": 31,
+        "6": 29,
+        "10": 27,
+        "11": 22,
+        "12": 18,
+        "13": 14,
+        "17": 7,
+        "15": 5,
+        "14": 5,
+        "16": 2
+      },
+      "has_leading_trailing_space": false
+    }
+  ],
+  "source_sha256": "a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659"
+}

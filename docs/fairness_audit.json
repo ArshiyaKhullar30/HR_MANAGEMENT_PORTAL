@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-08-27T20:39:13.141923+00:00",
+  "model_version": "v1",
+  "operating_threshold": 0.08,
+  "tolerance": 0.1,
+  "min_group_size": 30,
+  "attributes": {
+    "Gender": {
+      "groups": {
+        "Female": {
+          "n": 588,
+          "base_rate": 0.148,
+          "flag_rate": 0.5238,
+          "true_positive_rate": 0.908,
+          "false_positive_rate": 0.4571,
+          "mean_predicted_risk": 0.152,
+          "calibration_gap": 0.004
+        },
+        "Male": {
+          "n": 882,
+          "base_rate": 0.1701,
+          "flag_rate": 0.551,
+          "true_positive_rate": 0.94,
+          "false_positive_rate": 0.4713,
+          "mean_predicted_risk": 0.1665,
+          "calibration_gap": -0.0035
+        }
+      },
+      "equal_opportunity_difference": 0.032,
+      "predictive_equality_difference": 0.0142,
+      "max_calibration_gap": 0.004,
+      "within_tolerance": true
+    },
+    "MaritalStatus": {
+      "groups": {
+        "Divorced": {
+          "n": 327,
+          "base_rate": 0.1009,
+          "flag_rate": 0.4128,
+          "true_positive_rate": 0.9697,
+          "false_positive_rate": 0.3503,
+          "mean_predicted_risk": 0.1057,
+          "calibration_gap": 0.0048
+        },
+        "Married": {
+          "n": 673,
+          "base_rate": 0.1248,
+          "flag_rate": 0.5052,
+          "true_positive_rate": 0.869,
+          "false_positive_rate": 0.4533,
+          "mean_predicted_risk": 0.1365,
+          "calibration_gap": 0.0117
+        },
+        "Single": {
+          "n": 470,
+          "base_rate": 0.2553,
+          "flag_rate": 0.6787,
+          "true_positive_rate": 0.9583,
+          "false_positive_rate": 0.5829,
+          "mean_predicted_risk": 0.2337,
+          "calibration_gap": -0.0217
+        }
+      },
+      "equal_opportunity_difference": 0.1007,
+      "predictive_equality_difference": 0.2326,
+      "max_calibration_gap": 0.0217,
+      "within_tolerance": false
+    },
+    "AgeBand": {
+      "groups": {
+        "18-29": {
+          "n": 326,
+          "base_rate": 0.2791,
+          "flag_rate": 0.6994,
+          "true_positive_rate": 0.989,
+          "false_positive_rate": 0.5872,
+          "mean_predicted_risk": 0.2459,
+          "calibration_gap": -0.0332
+        },
+        "30-39": {
+          "n": 622,
+          "base_rate": 0.1431,
+          "flag_rate": 0.5611,
+          "true_positive_rate": 0.9438,
+          "false_positive_rate": 0.4972,
+          "mean_predicted_risk": 0.1562,
+          "calibration_gap": 0.0132
+        },
+        "40-49": {
+          "n": 349,
+          "base_rate": 0.0974,
+          "flag_rate": 0.4527,
+          "true_positive_rate": 0.8235,
+          "false_positive_rate": 0.4127,
+          "mean_predicted_risk": 0.1228,
+          "calibration_gap": 0.0253
+        },
+        "50+": {
+          "n": 173,
+          "base_rate": 0.1329,
+          "flag_rate": 0.341,
+          "true_positive_rate": 0.7826,
+          "false_positive_rate": 0.2733,
+          "mean_predicted_risk": 0.0927,
+          "calibration_gap": -0.0402
+        }
+      },
+      "equal_opportunity_difference": 0.2064,
+      "predictive_equality_difference": 0.3139,
+      "max_calibration_gap": 0.0402,
+      "within_tolerance": false
+    }
+  },
+  "all_within_tolerance": false,
+  "protected_attributes_excluded_from_levers": [
+    "Age",
+    "Gender",
+    "MaritalStatus",
+    "Over18"
+  ],
+  "interpretation": {
+    "Gender": "Within tolerance on both equal opportunity and predictive equality.",
+    "MaritalStatus": "Flagged, but the cause is a genuine base-rate difference of 15.4% across groups, not miscalibration \u2014 every group's calibration gap is under 0.022. The model is telling the truth about differing risk; the disparity is in the workforce, not added by the model. Calibration and equalised odds cannot both hold when base rates differ. Route flagged groups to human review and do not use the score as an automatic decision.",
+    "AgeBand": "Flagged, but the cause is a genuine base-rate difference of 18.2% across groups, not miscalibration \u2014 every group's calibration gap is under 0.040. The model is telling the truth about differing risk; the disparity is in the workforce, not added by the model. Calibration and equalised odds cannot both hold when base rates differ. Route flagged groups to human review and do not use the score as an automatic decision."
+  },
+  "limitation": "Observational fairness metrics computed on labels that may themselves encode historical bias. Parity here means the model adds no measurable disparity, not that the underlying process is fair."
+}

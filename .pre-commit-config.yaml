@@ -1,0 +1,42 @@
+# Guardrails that run before every commit (Phase 0.4).
+# Install once with:  make setup   (or: pre-commit install)
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  # MANDATORY. Notebook outputs on this project contain employee-level rows.
+  # Without this, PII enters git history permanently on the first commit.
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.10
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+
+  # Architectural invariant R1: fail the commit if anyone joins the two
+  # employee populations. See tests/unit/test_no_cross_population_join.py
+  - repo: local
+    hooks:
+      - id: no-cross-population-join
+        name: forbid cross-population employee join (finding F1)
+        entry: python scripts/check_no_cross_population_join.py
+        language: system
+        pass_filenames: false
+        files: '\.(py|ipynb)$'

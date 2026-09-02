@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-08-27T20:38:48.731691+00:00",
+  "run_id": "72e7b30d54d6",
+  "F1_employee_population_identity": {
+    "left_key": "EmployeeNumber",
+    "right_key": "Employee ID",
+    "left_distinct_keys": 1470,
+    "right_distinct_keys": 3000,
+    "shared_key_count": 753,
+    "attribute_agreement": {
+      "Gender vs GenderCode": {
+        "compared": 753,
+        "agree": 366,
+        "agree_pct": 48.6
+      },
+      "Age vs _age_from_dob": {
+        "compared": 753,
+        "agree": 45,
+        "agree_pct": 6.0
+      }
+    },
+    "mean_agreement_pct": 27.3,
+    "keys_refer_to_same_entities": false,
+    "verdict": "COINCIDENTAL OVERLAP \u2014 attributes agree only 27.3% on the 753 shared key values. These are different populations; joining them would fabricate records."
+  },
+  "F4_role_to_onet_matching": {
+    "onet_occupations": 1016,
+    "attrition_roles": 9,
+    "attrition_exact_matches": 0,
+    "engagement_titles": 31,
+    "engagement_exact_matches": 0,
+    "total_roles_needing_crosswalk": 40,
+    "verdict": "A semantic role -> SOC crosswalk is mandatory; exact matching yields nothing."
+  },
+  "F5_engagement_grain": {
+    "rows": 3150,
+    "distinct_employees": 3000,
+    "employees_with_multiple_rows": 150,
+    "grain": "employee x survey/training event",
+    "verdict": "Not one row per employee; resolve grain before any aggregation."
+  },
+  "F6_data_quality_defects": {
+    "engagement_exit_date_but_not_terminated": 1198,
+    "engagement_duplicate_id_rows": 150,
+    "attrition_constant_columns": [
+      "EmployeeCount",
+      "Over18",
+      "StandardHours"
+    ],
+    "attrition_missing_cells": 0,
+    "engagement_likert_observed_range": {
+      "Engagement Score": [
+        1,
+        5
+      ],
+      "Satisfaction Score": [
+        1,
+        5
+      ],
+      "Work-Life Balance Score": [
+        1,
+        5
+      ],
+      "Current Employee Rating": [
+        1,
+        5
+      ]
+    },
+    "verdict": "Likert columns are 1-5, not 0-100; the 0-100 rule would catch nothing."
+  },
+  "onet_referential_integrity": {
+    "essential_skills_subset_of_occupations": true,
+    "software_skills_subset_of_occupations": true,
+    "occupations_without_essential_skills": 106,
+    "occupations_without_software_skills": 93,
+    "foundational_skills": [
+      "Active Learning",
+      "Active Listening",
+      "Critical Thinking",
+      "Learning Strategies",
+      "Mathematics",
+      "Monitoring",
+      "Reading Comprehension",
+      "Science",
+      "Speaking",
+      "Writing"
+    ],
+    "technical_tool_count": 8753,
+    "technical_category_count": 134
+  }
+}

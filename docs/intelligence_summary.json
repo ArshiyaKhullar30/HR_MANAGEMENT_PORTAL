@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-27T20:39:04.386041+00:00",
+  "employees": 4470,
+  "population_a": 1470,
+  "population_b": 3000,
+  "high_risk": 58,
+  "medium_risk": 184,
+  "risk_unavailable": 3000,
+  "average_engagement": 2.94,
+  "skills_are_derived": true,
+  "critical_skill_gaps": 17
+}

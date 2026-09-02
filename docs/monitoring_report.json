@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-08-27T20:39:11.045160+00:00",
+  "reference": "employee_attrition_processed (training population)",
+  "current": "engagement_processed (Population B, standing in for shifted production data)",
+  "feature_drift": [
+    {
+      "feature": "YearsAtCompany",
+      "psi": 5.4199,
+      "psi_drifted": true,
+      "ks_pvalue": 0.0,
+      "ks_drifted": true,
+      "reference_mean": 7.008,
+      "current_mean": 2.911,
+      "severity": "severe"
+    },
+    {
+      "feature": "Age",
+      "psi": 0.2298,
+      "psi_drifted": true,
+      "ks_pvalue": 0.0,
+      "ks_drifted": true,
+      "reference_mean": 36.924,
+      "current_mean": 51.807,
+      "severity": "moderate"
+    },
+    {
+      "feature": "JobSatisfaction",
+      "psi": 0.0388,
+      "psi_drifted": false,
+      "ks_pvalue": 0.0,
+      "ks_drifted": true,
+      "reference_mean": 2.729,
+      "current_mean": 3.022,
+      "severity": "stable"
+    }
+  ],
+  "prediction_drift": {
+    "available": true,
+    "predictions_logged": 21,
+    "mean_probability": 0.1664,
+    "flagged_rate": 1.0,
+    "training_positive_rate": 0.1599,
+    "risk_band_distribution": {
+      "LOW": 19,
+      "HIGH": 2
+    },
+    "model_versions_seen": [
+      "v1"
+    ],
+    "note": "A flagged rate far above the training positive rate is expected here: the operating threshold is deliberately low because missing a leaver costs ~24x more than an unnecessary conversation."
+  },
+  "performance": {
+    "basis": "labelled training population (in-sample demonstration, not live performance)",
+    "model_version": "v1",
+    "current": {
+      "precision": 0.2771,
+      "recall": 0.9283,
+      "f1": 0.4268,
+      "roc_auc": 0.868,
+      "pr_auc": 0.6712,
+      "brier": 0.0885,
+      "threshold": 0.08,
+      "true_positives": 220,
+      "false_positives": 574,
+      "true_negatives": 659,
+      "false_negatives": 17,
+      "support_positive": 237,
+      "n": 1470
+    },
+    "baseline_at_training": {
+      "precision": 0.2609,
+      "recall": 0.8936,
+      "f1": 0.4038,
+      "roc_auc": 0.8086,
+      "pr_auc": 0.5339,
+      "brier": 0.1042,
+      "threshold": 0.08,
+      "true_positives": 42,
+      "false_positives": 119,
+      "true_negatives": 128,
+      "false_negatives": 5,
+      "support_positive": 47,
+      "n": 294
+    },
+    "baseline_f1": 0.4038,
+    "f1_delta": 0.023,
+    "f1_relative_limit": 0.3432,
+    "f1_absolute_floor": 0.2,
+    "f1_below_retrain_threshold": false
+  },
+  "retraining_decision": {
+    "retrain_recommended": true,
+    "reasons": [
+      "input drift above PSI 0.2 on: YearsAtCompany, Age"
+    ],
+    "rule": "IF drift > threshold OR F1 below threshold OR 6 months of new data THEN retrain",
+    "next_step": "new data -> validation -> training -> evaluation -> MLflow tracking -> human approval -> deploy new version"
+  },
+  "evidently_report": {
+    "generated": true,
+    "path": "docs/drift_report.html"
+  }
+}

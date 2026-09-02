@@ -1,0 +1,223 @@
+# ============================================================================
+# Role -> O*NET SOC crosswalk — HUMAN-REVIEWED OVERRIDES  (Step 11, finding F4)
+# ----------------------------------------------------------------------------
+# This file always wins over conf/role_crosswalk_auto.yaml.
+#
+# Why it exists: the semantic matcher gets the obvious cases right (Database
+# Administrators, Software Developers, Chief Executives) and some cases badly
+# wrong — it mapped "CIO" to *Editors* at 0.21 confidence and "Senior BI
+# Developer" to *Editors* at 0.36. Titles that are acronyms or internal
+# shorthand carry almost no semantic signal, so every one of the 40 roles was
+# checked by hand.
+#
+# Each entry records WHY, so a future reader can disagree with the reasoning
+# rather than guess at it. Every SOC code below was verified to have both
+# foundational and technical skill data attached.
+#
+# review_date: 2026-08-28
+# reviewer: engineering lead
+# roles_reviewed: 40 / 40
+# ============================================================================
+mappings:
+
+  # ---- Population A — pharmaceutical / manufacturing ----------------------
+  - role: Sales Executive
+    soc_code: "41-4011.00"
+    occupation_title: Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products
+    why: "Auto matched 'Sales Managers' — wrong seniority. This is an individual-contributor sales role at a manufacturer, not a people manager."
+
+  - role: Research Scientist
+    soc_code: "19-1042.00"
+    occupation_title: Medical Scientists, Except Epidemiologists
+    why: "Sits in the Research & Development department of a pharmaceutical employer; Medical Scientists fits better than the generic 'Biological Scientists, All Other'."
+
+  - role: Laboratory Technician
+    soc_code: "29-2012.00"
+    occupation_title: Medical and Clinical Laboratory Technicians
+    why: "Auto matched 'Dental Laboratory Technicians' — a different industry entirely. R&D-department lab work maps to clinical lab technicians."
+
+  - role: Manufacturing Director
+    soc_code: "11-3051.00"
+    occupation_title: Industrial Production Managers
+    why: "Auto match confirmed."
+
+  - role: Healthcare Representative
+    soc_code: "41-4011.00"
+    occupation_title: Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products
+    why: "Auto matched 'Patient Representatives', a hospital admin role. This role sits in R&D at a pharma employer — the standard O*NET equivalent of a medical/scientific representative is technical-products sales."
+
+  - role: Manager
+    soc_code: "11-1021.00"
+    occupation_title: General and Operations Managers
+    why: "Auto matched 'Managers, All Other', a residual bucket with thin skill data. General and Operations Managers is the substantive equivalent."
+
+  - role: Sales Representative
+    soc_code: "41-4012.00"
+    occupation_title: Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products
+    why: "Distinguished from Sales Executive: the non-technical product line."
+
+  - role: Research Director
+    soc_code: "11-9121.00"
+    occupation_title: Natural Sciences Managers
+    why: "Auto matched 'Clinical Research Coordinators' — an IC role, not a director. Natural Sciences Managers is the correct level."
+
+  - role: Human Resources
+    soc_code: "13-1071.00"
+    occupation_title: Human Resources Specialists
+    why: "Auto matched 'Human Resources Managers'. In this dataset 'Manager' is a separate job role, so this one is the individual contributor."
+
+  # ---- Population B — technology / production -----------------------------
+  - role: Production Technician I
+    soc_code: "51-9061.00"
+    occupation_title: Inspectors, Testers, Sorters, Samplers, and Weighers
+    why: "Entry-level production floor role. Auto matched a technologist occupation that overstates the level."
+
+  - role: Production Technician II
+    soc_code: "17-3026.00"
+    occupation_title: Industrial Engineering Technologists and Technicians
+    why: "Auto matched 'Health Technologists' — wrong industry. Tier II is the technologist level above Tech I."
+
+  - role: Area Sales Manager
+    soc_code: "11-2022.00"
+    occupation_title: Sales Managers
+    why: "Auto match confirmed."
+
+  - role: Production Manager
+    soc_code: "11-3051.00"
+    occupation_title: Industrial Production Managers
+    why: "Auto match confirmed."
+
+  - role: IT Support
+    soc_code: "15-1232.00"
+    occupation_title: Computer User Support Specialists
+    why: "Auto match confirmed."
+
+  - role: Software Engineer
+    soc_code: "15-1252.00"
+    occupation_title: Software Developers
+    why: "Auto match confirmed."
+
+  - role: Network Engineer
+    soc_code: "15-1244.00"
+    occupation_title: Network and Computer Systems Administrators
+    why: "Auto matched 'Telecommunications Engineering Specialists' — defensible but telecom-specific. This is a corporate network role."
+
+  - role: Sr. Network Engineer
+    soc_code: "15-1241.00"
+    occupation_title: Computer Network Architects
+    why: "The senior step above Network Engineer is network architecture, not more telecom."
+
+  - role: BI Developer
+    soc_code: "15-2051.01"
+    occupation_title: Business Intelligence Analysts
+    why: "Auto matched 'Web Developers' — wrong discipline. O*NET has an exact BI occupation."
+
+  - role: Senior BI Developer
+    soc_code: "15-2051.01"
+    occupation_title: Business Intelligence Analysts
+    why: "Auto matched 'Editors' at 0.36 confidence — nonsense. 'BI' carries no semantic signal for the embedding model."
+
+  - role: BI Director
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto matched 'Media Technical Directors/Managers' — the word 'Director' dominated the embedding. This is an IT leadership role."
+
+  - role: Data Analyst
+    soc_code: "15-2051.01"
+    occupation_title: Business Intelligence Analysts
+    why: "Auto matched 'Data Scientists', which overstates the role. BI Analysts is the closer fit for a reporting-oriented analyst."
+
+  - role: Data Architect
+    soc_code: "15-1243.00"
+    occupation_title: Database Architects
+    why: "Auto match confirmed."
+
+  - role: Principal Data Architect
+    soc_code: "15-1243.00"
+    occupation_title: Database Architects
+    why: "Same occupation as Data Architect; seniority is not an O*NET distinction here."
+
+  - role: Enterprise Architect
+    soc_code: "15-1299.08"
+    occupation_title: Computer Systems Engineers/Architects
+    why: "Auto matched 'Database Architects' — too narrow. Enterprise architecture spans systems, not just data."
+
+  - role: Database Administrator
+    soc_code: "15-1242.00"
+    occupation_title: Database Administrators
+    why: "Auto match confirmed — the only role that cleared the confidence threshold unaided."
+
+  - role: Sr. DBA
+    soc_code: "15-1242.00"
+    occupation_title: Database Administrators
+    why: "Acronym form of the same occupation; auto confidence was only 0.49 because 'DBA' is opaque to the model."
+
+  - role: Administrative Assistant
+    soc_code: "43-6014.00"
+    occupation_title: Secretaries and Administrative Assistants, Except Legal, Medical, and Executive
+    why: "Auto match confirmed."
+
+  - role: Accountant I
+    soc_code: "13-2011.00"
+    occupation_title: Accountants and Auditors
+    why: "Auto match confirmed."
+
+  - role: Sr. Accountant
+    soc_code: "13-2011.00"
+    occupation_title: Accountants and Auditors
+    why: "Auto matched 'Financial Specialists, All Other', a residual bucket. Same occupation as Accountant I."
+
+  - role: Sales Manager
+    soc_code: "11-2022.00"
+    occupation_title: Sales Managers
+    why: "Auto match confirmed."
+
+  - role: Director of Sales
+    soc_code: "11-2022.00"
+    occupation_title: Sales Managers
+    why: "Auto match confirmed."
+
+  - role: Director of Operations
+    soc_code: "11-1021.00"
+    occupation_title: General and Operations Managers
+    why: "Auto matched 'Business Operations Specialists, All Other' — an IC occupation. This is a leadership role."
+
+  - role: Shared Services Manager
+    soc_code: "11-1021.00"
+    occupation_title: General and Operations Managers
+    why: "Auto matched 'Personal Service Managers, All Other' — 'Services' misled the model. Shared services is back-office operations."
+
+  - role: Software Engineering Manager
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto matched 'Architectural and Engineering Managers', which is civil/mechanical engineering leadership, not software."
+
+  - role: IT Manager - DB
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto matched the IC occupation 'Database Administrators'; this is the management level."
+
+  - role: IT Manager - Support
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "IT management, not project management."
+
+  - role: IT Manager - Infra
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto match confirmed at the manager level."
+
+  - role: IT Director
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto matched 'Information Technology Project Managers' — a different discipline."
+
+  - role: CIO
+    soc_code: "11-3021.00"
+    occupation_title: Computer and Information Systems Managers
+    why: "Auto matched 'Editors' at 0.21 confidence — the worst failure in the set. Three-letter acronyms are invisible to the embedding model, which is the clearest argument for this review step existing."
+
+  - role: President & CEO
+    soc_code: "11-1011.00"
+    occupation_title: Chief Executives
+    why: "Auto match confirmed."

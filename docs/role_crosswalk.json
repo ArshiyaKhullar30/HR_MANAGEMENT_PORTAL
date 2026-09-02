@@ -1,0 +1,1246 @@
+{
+  "roles": 40,
+  "flagged_for_review": 39,
+  "mappings": [
+    {
+      "role": "Production Technician I",
+      "source": "hr_performance_engagement",
+      "soc_code": "17-3029.00",
+      "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+      "confidence": 0.557,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "19-4043.00",
+          "occupation_title": "Geological Technicians, Except Hydrologic Technicians",
+          "confidence": 0.5559
+        },
+        {
+          "soc_code": "29-2099.00",
+          "occupation_title": "Health Technologists and Technicians, All Other",
+          "confidence": 0.5554
+        },
+        {
+          "soc_code": "19-4031.00",
+          "occupation_title": "Chemical Technicians",
+          "confidence": 0.5416
+        },
+        {
+          "soc_code": "19-4012.00",
+          "occupation_title": "Agricultural Technicians",
+          "confidence": 0.5405
+        }
+      ]
+    },
+    {
+      "role": "Production Technician II",
+      "source": "hr_performance_engagement",
+      "soc_code": "29-2099.00",
+      "occupation_title": "Health Technologists and Technicians, All Other",
+      "confidence": 0.5306,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "19-4031.00",
+          "occupation_title": "Chemical Technicians",
+          "confidence": 0.524
+        },
+        {
+          "soc_code": "17-3029.00",
+          "occupation_title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+          "confidence": 0.5195
+        },
+        {
+          "soc_code": "19-4043.00",
+          "occupation_title": "Geological Technicians, Except Hydrologic Technicians",
+          "confidence": 0.5088
+        },
+        {
+          "soc_code": "51-9141.00",
+          "occupation_title": "Semiconductor Processing Technicians",
+          "confidence": 0.4933
+        }
+      ]
+    },
+    {
+      "role": "Sales Executive",
+      "source": "employee_attrition",
+      "soc_code": "11-2022.00",
+      "occupation_title": "Sales Managers",
+      "confidence": 0.5727,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "41-2031.00",
+          "occupation_title": "Retail Salespersons",
+          "confidence": 0.5393
+        },
+        {
+          "soc_code": "41-4012.00",
+          "occupation_title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+          "confidence": 0.5208
+        },
+        {
+          "soc_code": "41-9099.00",
+          "occupation_title": "Sales and Related Workers, All Other",
+          "confidence": 0.516
+        },
+        {
+          "soc_code": "41-1011.00",
+          "occupation_title": "First-Line Supervisors of Retail Sales Workers",
+          "confidence": 0.509
+        }
+      ]
+    },
+    {
+      "role": "Area Sales Manager",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-2022.00",
+      "occupation_title": "Sales Managers",
+      "confidence": 0.6138,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "41-9091.00",
+          "occupation_title": "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",
+          "confidence": 0.4968
+        },
+        {
+          "soc_code": "11-3061.00",
+          "occupation_title": "Purchasing Managers",
+          "confidence": 0.473
+        },
+        {
+          "soc_code": "11-2011.00",
+          "occupation_title": "Advertising and Promotions Managers",
+          "confidence": 0.4704
+        },
+        {
+          "soc_code": "41-2031.00",
+          "occupation_title": "Retail Salespersons",
+          "confidence": 0.4689
+        }
+      ]
+    },
+    {
+      "role": "Research Scientist",
+      "source": "employee_attrition",
+      "soc_code": "19-1029.00",
+      "occupation_title": "Biological Scientists, All Other",
+      "confidence": 0.5909,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1221.00",
+          "occupation_title": "Computer and Information Research Scientists",
+          "confidence": 0.5847
+        },
+        {
+          "soc_code": "19-1042.00",
+          "occupation_title": "Medical Scientists, Except Epidemiologists",
+          "confidence": 0.572
+        },
+        {
+          "soc_code": "19-1099.00",
+          "occupation_title": "Life Scientists, All Other",
+          "confidence": 0.5614
+        },
+        {
+          "soc_code": "19-1011.00",
+          "occupation_title": "Animal Scientists",
+          "confidence": 0.5504
+        }
+      ]
+    },
+    {
+      "role": "Laboratory Technician",
+      "source": "employee_attrition",
+      "soc_code": "51-9081.00",
+      "occupation_title": "Dental Laboratory Technicians",
+      "confidence": 0.6891,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "29-2012.00",
+          "occupation_title": "Medical and Clinical Laboratory Technicians",
+          "confidence": 0.6513
+        },
+        {
+          "soc_code": "19-4031.00",
+          "occupation_title": "Chemical Technicians",
+          "confidence": 0.6459
+        },
+        {
+          "soc_code": "29-2011.00",
+          "occupation_title": "Medical and Clinical Laboratory Technologists",
+          "confidence": 0.6335
+        },
+        {
+          "soc_code": "19-4043.00",
+          "occupation_title": "Geological Technicians, Except Hydrologic Technicians",
+          "confidence": 0.6171
+        }
+      ]
+    },
+    {
+      "role": "Production Manager",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-3051.00",
+      "occupation_title": "Industrial Production Managers",
+      "confidence": 0.6318,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-9199.00",
+          "occupation_title": "Managers, All Other",
+          "confidence": 0.5481
+        },
+        {
+          "soc_code": "11-3051.02",
+          "occupation_title": "Geothermal Production Managers",
+          "confidence": 0.5353
+        },
+        {
+          "soc_code": "11-3051.06",
+          "occupation_title": "Hydroelectric Production Managers",
+          "confidence": 0.5317
+        },
+        {
+          "soc_code": "51-1011.00",
+          "occupation_title": "First-Line Supervisors of Production and Operating Workers",
+          "confidence": 0.5049
+        }
+      ]
+    },
+    {
+      "role": "Manufacturing Director",
+      "source": "employee_attrition",
+      "soc_code": "11-3051.00",
+      "occupation_title": "Industrial Production Managers",
+      "confidence": 0.4622,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "13-1199.00",
+          "occupation_title": "Business Operations Specialists, All Other",
+          "confidence": 0.4553
+        },
+        {
+          "soc_code": "51-9199.00",
+          "occupation_title": "Production Workers, All Other",
+          "confidence": 0.4508
+        },
+        {
+          "soc_code": "49-9044.00",
+          "occupation_title": "Millwrights",
+          "confidence": 0.4474
+        },
+        {
+          "soc_code": "11-9199.00",
+          "occupation_title": "Managers, All Other",
+          "confidence": 0.4398
+        }
+      ]
+    },
+    {
+      "role": "Healthcare Representative",
+      "source": "employee_attrition",
+      "soc_code": "29-2099.08",
+      "occupation_title": "Patient Representatives",
+      "confidence": 0.686,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "31-9099.00",
+          "occupation_title": "Healthcare Support Workers, All Other",
+          "confidence": 0.5209
+        },
+        {
+          "soc_code": "29-1229.00",
+          "occupation_title": "Physicians, All Other",
+          "confidence": 0.4985
+        },
+        {
+          "soc_code": "11-9111.00",
+          "occupation_title": "Medical and Health Services Managers",
+          "confidence": 0.4949
+        },
+        {
+          "soc_code": "21-1091.00",
+          "occupation_title": "Health Education Specialists",
+          "confidence": 0.4623
+        }
+      ]
+    },
+    {
+      "role": "Manager",
+      "source": "employee_attrition",
+      "soc_code": "11-9199.00",
+      "occupation_title": "Managers, All Other",
+      "confidence": 0.6515,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-9179.00",
+          "occupation_title": "Personal Service Managers, All Other",
+          "confidence": 0.5286
+        },
+        {
+          "soc_code": "11-9051.00",
+          "occupation_title": "Food Service Managers",
+          "confidence": 0.5164
+        },
+        {
+          "soc_code": "11-3051.06",
+          "occupation_title": "Hydroelectric Production Managers",
+          "confidence": 0.4991
+        },
+        {
+          "soc_code": "11-3012.00",
+          "occupation_title": "Administrative Services Managers",
+          "confidence": 0.4956
+        }
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1252.00",
+      "occupation_title": "Software Developers",
+      "confidence": 0.638,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1299.08",
+          "occupation_title": "Computer Systems Engineers/Architects",
+          "confidence": 0.6035
+        },
+        {
+          "soc_code": "17-2061.00",
+          "occupation_title": "Computer Hardware Engineers",
+          "confidence": 0.5597
+        },
+        {
+          "soc_code": "17-2199.08",
+          "occupation_title": "Robotics Engineers",
+          "confidence": 0.5087
+        },
+        {
+          "soc_code": "15-1251.00",
+          "occupation_title": "Computer Programmers",
+          "confidence": 0.5081
+        }
+      ]
+    },
+    {
+      "role": "IT Support",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1232.00",
+      "occupation_title": "Computer User Support Specialists",
+      "confidence": 0.4135,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "23-2099.00",
+          "occupation_title": "Legal Support Workers, All Other",
+          "confidence": 0.3243
+        },
+        {
+          "soc_code": "15-1231.00",
+          "occupation_title": "Computer Network Support Specialists",
+          "confidence": 0.3232
+        },
+        {
+          "soc_code": "31-9099.00",
+          "occupation_title": "Healthcare Support Workers, All Other",
+          "confidence": 0.3012
+        },
+        {
+          "soc_code": "43-9199.00",
+          "occupation_title": "Office and Administrative Support Workers, All Other",
+          "confidence": 0.3002
+        }
+      ]
+    },
+    {
+      "role": "Sales Representative",
+      "source": "employee_attrition",
+      "soc_code": "41-3091.00",
+      "occupation_title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",
+      "confidence": 0.6053,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "41-2031.00",
+          "occupation_title": "Retail Salespersons",
+          "confidence": 0.5798
+        },
+        {
+          "soc_code": "41-4012.00",
+          "occupation_title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+          "confidence": 0.5699
+        },
+        {
+          "soc_code": "11-2022.00",
+          "occupation_title": "Sales Managers",
+          "confidence": 0.5432
+        },
+        {
+          "soc_code": "41-9099.00",
+          "occupation_title": "Sales and Related Workers, All Other",
+          "confidence": 0.5224
+        }
+      ]
+    },
+    {
+      "role": "Research Director",
+      "source": "employee_attrition",
+      "soc_code": "11-9121.01",
+      "occupation_title": "Clinical Research Coordinators",
+      "confidence": 0.4597,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1221.00",
+          "occupation_title": "Computer and Information Research Scientists",
+          "confidence": 0.4517
+        },
+        {
+          "soc_code": "27-2012.05",
+          "occupation_title": "Media Technical Directors/Managers",
+          "confidence": 0.4212
+        },
+        {
+          "soc_code": "13-1161.00",
+          "occupation_title": "Market Research Analysts and Marketing Specialists",
+          "confidence": 0.4164
+        },
+        {
+          "soc_code": "19-1042.00",
+          "occupation_title": "Medical Scientists, Except Epidemiologists",
+          "confidence": 0.3947
+        }
+      ]
+    },
+    {
+      "role": "Data Analyst",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-2051.00",
+      "occupation_title": "Data Scientists",
+      "confidence": 0.6539,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1211.00",
+          "occupation_title": "Computer Systems Analysts",
+          "confidence": 0.5933
+        },
+        {
+          "soc_code": "15-2051.01",
+          "occupation_title": "Business Intelligence Analysts",
+          "confidence": 0.5929
+        },
+        {
+          "soc_code": "15-2031.00",
+          "occupation_title": "Operations Research Analysts",
+          "confidence": 0.577
+        },
+        {
+          "soc_code": "33-3021.06",
+          "occupation_title": "Intelligence Analysts",
+          "confidence": 0.5765
+        }
+      ]
+    },
+    {
+      "role": "Network Engineer",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1241.01",
+      "occupation_title": "Telecommunications Engineering Specialists",
+      "confidence": 0.63,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1241.00",
+          "occupation_title": "Computer Network Architects",
+          "confidence": 0.5599
+        },
+        {
+          "soc_code": "15-1299.08",
+          "occupation_title": "Computer Systems Engineers/Architects",
+          "confidence": 0.5575
+        },
+        {
+          "soc_code": "15-1231.00",
+          "occupation_title": "Computer Network Support Specialists",
+          "confidence": 0.552
+        },
+        {
+          "soc_code": "17-2061.00",
+          "occupation_title": "Computer Hardware Engineers",
+          "confidence": 0.5361
+        }
+      ]
+    },
+    {
+      "role": "Human Resources",
+      "source": "employee_attrition",
+      "soc_code": "11-3121.00",
+      "occupation_title": "Human Resources Managers",
+      "confidence": 0.6996,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "13-1071.00",
+          "occupation_title": "Human Resources Specialists",
+          "confidence": 0.6596
+        },
+        {
+          "soc_code": "43-4161.00",
+          "occupation_title": "Human Resources Assistants, Except Payroll and Timekeeping",
+          "confidence": 0.5349
+        },
+        {
+          "soc_code": "45-4011.00",
+          "occupation_title": "Forest and Conservation Workers",
+          "confidence": 0.4405
+        },
+        {
+          "soc_code": "11-3131.00",
+          "occupation_title": "Training and Development Managers",
+          "confidence": 0.4401
+        }
+      ]
+    },
+    {
+      "role": "Sr. Network Engineer",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1241.01",
+      "occupation_title": "Telecommunications Engineering Specialists",
+      "confidence": 0.5447,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "17-2199.00",
+          "occupation_title": "Engineers, All Other",
+          "confidence": 0.51
+        },
+        {
+          "soc_code": "17-2061.00",
+          "occupation_title": "Computer Hardware Engineers",
+          "confidence": 0.4809
+        },
+        {
+          "soc_code": "17-3026.00",
+          "occupation_title": "Industrial Engineering Technologists and Technicians",
+          "confidence": 0.47
+        },
+        {
+          "soc_code": "17-3023.00",
+          "occupation_title": "Electrical and Electronic Engineering Technologists and Technicians",
+          "confidence": 0.4672
+        }
+      ]
+    },
+    {
+      "role": "BI Developer",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1254.00",
+      "occupation_title": "Web Developers",
+      "confidence": 0.4372,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1252.00",
+          "occupation_title": "Software Developers",
+          "confidence": 0.4227
+        },
+        {
+          "soc_code": "15-1251.00",
+          "occupation_title": "Computer Programmers",
+          "confidence": 0.4003
+        },
+        {
+          "soc_code": "27-3041.00",
+          "occupation_title": "Editors",
+          "confidence": 0.3976
+        },
+        {
+          "soc_code": "15-1253.00",
+          "occupation_title": "Software Quality Assurance Analysts and Testers",
+          "confidence": 0.3832
+        }
+      ]
+    },
+    {
+      "role": "Accountant I",
+      "source": "hr_performance_engagement",
+      "soc_code": "13-2011.00",
+      "occupation_title": "Accountants and Auditors",
+      "confidence": 0.4968,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "43-3099.00",
+          "occupation_title": "Financial Clerks, All Other",
+          "confidence": 0.4816
+        },
+        {
+          "soc_code": "13-2099.00",
+          "occupation_title": "Financial Specialists, All Other",
+          "confidence": 0.4773
+        },
+        {
+          "soc_code": "43-3031.00",
+          "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+          "confidence": 0.4511
+        },
+        {
+          "soc_code": "13-2081.00",
+          "occupation_title": "Tax Examiners and Collectors, and Revenue Agents",
+          "confidence": 0.4188
+        }
+      ]
+    },
+    {
+      "role": "Administrative Assistant",
+      "source": "hr_performance_engagement",
+      "soc_code": "43-6014.00",
+      "occupation_title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+      "confidence": 0.6929,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "43-6011.00",
+          "occupation_title": "Executive Secretaries and Executive Administrative Assistants",
+          "confidence": 0.6294
+        },
+        {
+          "soc_code": "11-3012.00",
+          "occupation_title": "Administrative Services Managers",
+          "confidence": 0.5437
+        },
+        {
+          "soc_code": "25-9049.00",
+          "occupation_title": "Teaching Assistants, All Other",
+          "confidence": 0.5237
+        },
+        {
+          "soc_code": "43-1011.00",
+          "occupation_title": "First-Line Supervisors of Office and Administrative Support Workers",
+          "confidence": 0.5228
+        }
+      ]
+    },
+    {
+      "role": "Senior BI Developer",
+      "source": "hr_performance_engagement",
+      "soc_code": "27-3041.00",
+      "occupation_title": "Editors",
+      "confidence": 0.3546,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "13-1082.00",
+          "occupation_title": "Project Management Specialists",
+          "confidence": 0.3539
+        },
+        {
+          "soc_code": "13-1199.00",
+          "occupation_title": "Business Operations Specialists, All Other",
+          "confidence": 0.3505
+        },
+        {
+          "soc_code": "25-4011.00",
+          "occupation_title": "Archivists",
+          "confidence": 0.3413
+        },
+        {
+          "soc_code": "13-2099.00",
+          "occupation_title": "Financial Specialists, All Other",
+          "confidence": 0.3363
+        }
+      ]
+    },
+    {
+      "role": "Sales Manager",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-2022.00",
+      "occupation_title": "Sales Managers",
+      "confidence": 0.7156,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "41-2031.00",
+          "occupation_title": "Retail Salespersons",
+          "confidence": 0.5769
+        },
+        {
+          "soc_code": "11-3061.00",
+          "occupation_title": "Purchasing Managers",
+          "confidence": 0.5531
+        },
+        {
+          "soc_code": "41-1011.00",
+          "occupation_title": "First-Line Supervisors of Retail Sales Workers",
+          "confidence": 0.5512
+        },
+        {
+          "soc_code": "41-1012.00",
+          "occupation_title": "First-Line Supervisors of Non-Retail Sales Workers",
+          "confidence": 0.5445
+        }
+      ]
+    },
+    {
+      "role": "Database Administrator",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1242.00",
+      "occupation_title": "Database Administrators",
+      "confidence": 0.7804,
+      "needs_review": false,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1244.00",
+          "occupation_title": "Network and Computer Systems Administrators",
+          "confidence": 0.4857
+        },
+        {
+          "soc_code": "15-1299.01",
+          "occupation_title": "Web Administrators",
+          "confidence": 0.4759
+        },
+        {
+          "soc_code": "15-2051.02",
+          "occupation_title": "Clinical Data Managers",
+          "confidence": 0.4461
+        },
+        {
+          "soc_code": "15-1243.01",
+          "occupation_title": "Data Warehousing Specialists",
+          "confidence": 0.4378
+        }
+      ]
+    },
+    {
+      "role": "IT Manager - DB",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1242.00",
+      "occupation_title": "Database Administrators",
+      "confidence": 0.5372,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-3021.00",
+          "occupation_title": "Computer and Information Systems Managers",
+          "confidence": 0.476
+        },
+        {
+          "soc_code": "15-1243.01",
+          "occupation_title": "Data Warehousing Specialists",
+          "confidence": 0.4746
+        },
+        {
+          "soc_code": "15-2051.02",
+          "occupation_title": "Clinical Data Managers",
+          "confidence": 0.4729
+        },
+        {
+          "soc_code": "15-1299.09",
+          "occupation_title": "Information Technology Project Managers",
+          "confidence": 0.4501
+        }
+      ]
+    },
+    {
+      "role": "Shared Services Manager",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-9179.00",
+      "occupation_title": "Personal Service Managers, All Other",
+      "confidence": 0.4969,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-3012.00",
+          "occupation_title": "Administrative Services Managers",
+          "confidence": 0.4264
+        },
+        {
+          "soc_code": "11-9051.00",
+          "occupation_title": "Food Service Managers",
+          "confidence": 0.4096
+        },
+        {
+          "soc_code": "35-3041.00",
+          "occupation_title": "Food Servers, Nonrestaurant",
+          "confidence": 0.3389
+        },
+        {
+          "soc_code": "21-1099.00",
+          "occupation_title": "Community and Social Service Specialists, All Other",
+          "confidence": 0.3231
+        }
+      ]
+    },
+    {
+      "role": "Sr. Accountant",
+      "source": "hr_performance_engagement",
+      "soc_code": "13-2099.00",
+      "occupation_title": "Financial Specialists, All Other",
+      "confidence": 0.5622,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "43-3099.00",
+          "occupation_title": "Financial Clerks, All Other",
+          "confidence": 0.5585
+        },
+        {
+          "soc_code": "13-1199.00",
+          "occupation_title": "Business Operations Specialists, All Other",
+          "confidence": 0.4462
+        },
+        {
+          "soc_code": "11-9039.00",
+          "occupation_title": "Education Administrators, All Other",
+          "confidence": 0.4409
+        },
+        {
+          "soc_code": "43-3031.00",
+          "occupation_title": "Bookkeeping, Accounting, and Auditing Clerks",
+          "confidence": 0.4366
+        }
+      ]
+    },
+    {
+      "role": "CIO",
+      "source": "hr_performance_engagement",
+      "soc_code": "27-3041.00",
+      "occupation_title": "Editors",
+      "confidence": 0.2139,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "27-2021.00",
+          "occupation_title": "Athletes and Sports Competitors",
+          "confidence": 0.1931
+        },
+        {
+          "soc_code": "55-1015.00",
+          "occupation_title": "Command and Control Center Officers",
+          "confidence": 0.1924
+        },
+        {
+          "soc_code": "11-9141.00",
+          "occupation_title": "Property, Real Estate, and Community Association Managers",
+          "confidence": 0.1807
+        },
+        {
+          "soc_code": "29-9021.00",
+          "occupation_title": "Health Information Technologists and Medical Registrars",
+          "confidence": 0.1795
+        }
+      ]
+    },
+    {
+      "role": "BI Director",
+      "source": "hr_performance_engagement",
+      "soc_code": "27-2012.05",
+      "occupation_title": "Media Technical Directors/Managers",
+      "confidence": 0.3464,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "27-1011.00",
+          "occupation_title": "Art Directors",
+          "confidence": 0.3436
+        },
+        {
+          "soc_code": "27-2012.00",
+          "occupation_title": "Producers and Directors",
+          "confidence": 0.3379
+        },
+        {
+          "soc_code": "13-1199.00",
+          "occupation_title": "Business Operations Specialists, All Other",
+          "confidence": 0.3361
+        },
+        {
+          "soc_code": "11-9199.00",
+          "occupation_title": "Managers, All Other",
+          "confidence": 0.3338
+        }
+      ]
+    },
+    {
+      "role": "IT Manager - Support",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1299.09",
+      "occupation_title": "Information Technology Project Managers",
+      "confidence": 0.4558,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-3021.00",
+          "occupation_title": "Computer and Information Systems Managers",
+          "confidence": 0.4357
+        },
+        {
+          "soc_code": "15-1232.00",
+          "occupation_title": "Computer User Support Specialists",
+          "confidence": 0.433
+        },
+        {
+          "soc_code": "15-1231.00",
+          "occupation_title": "Computer Network Support Specialists",
+          "confidence": 0.4276
+        },
+        {
+          "soc_code": "11-3012.00",
+          "occupation_title": "Administrative Services Managers",
+          "confidence": 0.4129
+        }
+      ]
+    },
+    {
+      "role": "IT Manager - Infra",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-3021.00",
+      "occupation_title": "Computer and Information Systems Managers",
+      "confidence": 0.5708,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1299.09",
+          "occupation_title": "Information Technology Project Managers",
+          "confidence": 0.5291
+        },
+        {
+          "soc_code": "11-3012.00",
+          "occupation_title": "Administrative Services Managers",
+          "confidence": 0.4355
+        },
+        {
+          "soc_code": "11-9041.00",
+          "occupation_title": "Architectural and Engineering Managers",
+          "confidence": 0.4169
+        },
+        {
+          "soc_code": "11-9179.00",
+          "occupation_title": "Personal Service Managers, All Other",
+          "confidence": 0.4074
+        }
+      ]
+    },
+    {
+      "role": "Director of Operations",
+      "source": "hr_performance_engagement",
+      "soc_code": "13-1199.00",
+      "occupation_title": "Business Operations Specialists, All Other",
+      "confidence": 0.6214,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-1021.00",
+          "occupation_title": "General and Operations Managers",
+          "confidence": 0.526
+        },
+        {
+          "soc_code": "53-3099.00",
+          "occupation_title": "Motor Vehicle Operators, All Other",
+          "confidence": 0.5015
+        },
+        {
+          "soc_code": "55-1015.00",
+          "occupation_title": "Command and Control Center Officers",
+          "confidence": 0.4901
+        },
+        {
+          "soc_code": "47-5013.00",
+          "occupation_title": "Service Unit Operators, Oil and Gas",
+          "confidence": 0.4838
+        }
+      ]
+    },
+    {
+      "role": "Director of Sales",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-2022.00",
+      "occupation_title": "Sales Managers",
+      "confidence": 0.5703,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "41-9099.00",
+          "occupation_title": "Sales and Related Workers, All Other",
+          "confidence": 0.4916
+        },
+        {
+          "soc_code": "41-2031.00",
+          "occupation_title": "Retail Salespersons",
+          "confidence": 0.4896
+        },
+        {
+          "soc_code": "41-1011.00",
+          "occupation_title": "First-Line Supervisors of Retail Sales Workers",
+          "confidence": 0.4784
+        },
+        {
+          "soc_code": "41-3091.00",
+          "occupation_title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",
+          "confidence": 0.477
+        }
+      ]
+    },
+    {
+      "role": "President & CEO",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-1011.00",
+      "occupation_title": "Chief Executives",
+      "confidence": 0.5479,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-9199.00",
+          "occupation_title": "Managers, All Other",
+          "confidence": 0.5249
+        },
+        {
+          "soc_code": "11-9039.00",
+          "occupation_title": "Education Administrators, All Other",
+          "confidence": 0.4411
+        },
+        {
+          "soc_code": "11-9179.00",
+          "occupation_title": "Personal Service Managers, All Other",
+          "confidence": 0.4201
+        },
+        {
+          "soc_code": "55-1019.00",
+          "occupation_title": "Military Officer Special and Tactical Operations Leaders, All Other",
+          "confidence": 0.3985
+        }
+      ]
+    },
+    {
+      "role": "IT Director",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1299.09",
+      "occupation_title": "Information Technology Project Managers",
+      "confidence": 0.4476,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "27-2012.05",
+          "occupation_title": "Media Technical Directors/Managers",
+          "confidence": 0.4264
+        },
+        {
+          "soc_code": "11-3021.00",
+          "occupation_title": "Computer and Information Systems Managers",
+          "confidence": 0.4089
+        },
+        {
+          "soc_code": "27-2012.03",
+          "occupation_title": "Media Programming Directors",
+          "confidence": 0.3656
+        },
+        {
+          "soc_code": "15-1221.00",
+          "occupation_title": "Computer and Information Research Scientists",
+          "confidence": 0.3479
+        }
+      ]
+    },
+    {
+      "role": "Software Engineering Manager",
+      "source": "hr_performance_engagement",
+      "soc_code": "11-9041.00",
+      "occupation_title": "Architectural and Engineering Managers",
+      "confidence": 0.5575,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1252.00",
+          "occupation_title": "Software Developers",
+          "confidence": 0.517
+        },
+        {
+          "soc_code": "15-1299.08",
+          "occupation_title": "Computer Systems Engineers/Architects",
+          "confidence": 0.5131
+        },
+        {
+          "soc_code": "11-3021.00",
+          "occupation_title": "Computer and Information Systems Managers",
+          "confidence": 0.494
+        },
+        {
+          "soc_code": "13-1082.00",
+          "occupation_title": "Project Management Specialists",
+          "confidence": 0.4818
+        }
+      ]
+    },
+    {
+      "role": "Principal Data Architect",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1243.00",
+      "occupation_title": "Database Architects",
+      "confidence": 0.525,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1243.01",
+          "occupation_title": "Data Warehousing Specialists",
+          "confidence": 0.4407
+        },
+        {
+          "soc_code": "15-1241.00",
+          "occupation_title": "Computer Network Architects",
+          "confidence": 0.4328
+        },
+        {
+          "soc_code": "15-1242.00",
+          "occupation_title": "Database Administrators",
+          "confidence": 0.4209
+        },
+        {
+          "soc_code": "15-2051.00",
+          "occupation_title": "Data Scientists",
+          "confidence": 0.414
+        }
+      ]
+    },
+    {
+      "role": "Sr. DBA",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1242.00",
+      "occupation_title": "Database Administrators",
+      "confidence": 0.4927,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1243.00",
+          "occupation_title": "Database Architects",
+          "confidence": 0.3674
+        },
+        {
+          "soc_code": "15-1253.00",
+          "occupation_title": "Software Quality Assurance Analysts and Testers",
+          "confidence": 0.3288
+        },
+        {
+          "soc_code": "15-1243.01",
+          "occupation_title": "Data Warehousing Specialists",
+          "confidence": 0.3174
+        },
+        {
+          "soc_code": "15-2051.02",
+          "occupation_title": "Clinical Data Managers",
+          "confidence": 0.2953
+        }
+      ]
+    },
+    {
+      "role": "Enterprise Architect",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1243.00",
+      "occupation_title": "Database Architects",
+      "confidence": 0.6078,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "11-9041.00",
+          "occupation_title": "Architectural and Engineering Managers",
+          "confidence": 0.5847
+        },
+        {
+          "soc_code": "15-1299.08",
+          "occupation_title": "Computer Systems Engineers/Architects",
+          "confidence": 0.5146
+        },
+        {
+          "soc_code": "15-1241.00",
+          "occupation_title": "Computer Network Architects",
+          "confidence": 0.4768
+        },
+        {
+          "soc_code": "17-1011.00",
+          "occupation_title": "Architects, Except Landscape and Naval",
+          "confidence": 0.4547
+        }
+      ]
+    },
+    {
+      "role": "Data Architect",
+      "source": "hr_performance_engagement",
+      "soc_code": "15-1243.00",
+      "occupation_title": "Database Architects",
+      "confidence": 0.6905,
+      "needs_review": true,
+      "reviewed": false,
+      "alternatives": [
+        {
+          "soc_code": "15-1243.01",
+          "occupation_title": "Data Warehousing Specialists",
+          "confidence": 0.6067
+        },
+        {
+          "soc_code": "15-2051.00",
+          "occupation_title": "Data Scientists",
+          "confidence": 0.6006
+        },
+        {
+          "soc_code": "15-2051.02",
+          "occupation_title": "Clinical Data Managers",
+          "confidence": 0.5164
+        },
+        {
+          "soc_code": "15-1242.00",
+          "occupation_title": "Database Administrators",
+          "confidence": 0.4948
+        }
+      ]
+    }
+  ]
+}

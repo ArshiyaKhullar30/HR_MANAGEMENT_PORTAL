@@ -1,0 +1,1084 @@
+{
+  "name": "hr_performance_engagement",
+  "rows": 3150,
+  "columns": 39,
+  "duplicate_rows": 150,
+  "total_missing_cells": 3088,
+  "constant_columns": [],
+  "candidate_keys": [],
+  "id_like_columns": [
+    "Employee ID"
+  ],
+  "columns_detail": [
+    {
+      "name": "Unnamed: 0",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3000,
+      "unique_pct": 95.24,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "numeric": {
+        "min": 0.0,
+        "25%": 746.0,
+        "50%": 1495.5,
+        "75%": 2246.75,
+        "max": 2999.0,
+        "mean": 1495.7483,
+        "std": 867.0079
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "FirstName",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1597,
+      "unique_pct": 50.7,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Uriah",
+        "Paula",
+        "Edward",
+        "Michael",
+        "Jasmine"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "LastName",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1137,
+      "unique_pct": 36.1,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Bridges",
+        "Small",
+        "Buck",
+        "Riordan",
+        "Onque"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "StartDate",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1496,
+      "unique_pct": 47.49,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "20-Sep-19",
+        "11-Feb-23",
+        "10-Dec-18",
+        "21-Jun-21",
+        "29-Jun-19"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "ExitDate",
+      "dtype": "object",
+      "non_null": 1606,
+      "missing": 1544,
+      "missing_pct": 49.02,
+      "unique": 820,
+      "unique_pct": 26.03,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "03-Jul-23",
+        "29-Jan-23",
+        "29-Jun-23",
+        "04-Nov-19",
+        "27-Nov-22"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Title",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 32,
+      "unique_pct": 1.02,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Production Technician I",
+        "Area Sales Manager",
+        "Production Technician II",
+        "IT Support",
+        "Network Engineer"
+      ],
+      "numeric": null,
+      "categories": {
+        "Production Technician I": 1380,
+        "Production Technician II": 545,
+        "Area Sales Manager": 311,
+        "Production Manager": 159,
+        "Software Engineer": 94,
+        "IT Support": 94,
+        "Network Engineer": 58,
+        "Sr. Network Engineer": 53,
+        "BI Developer": 50,
+        "Data Analyst": 49,
+        "Administrative Assistant": 35,
+        "Accountant I": 35,
+        "Senior BI Developer": 32,
+        "Sales Manager": 31,
+        "Database Administrator": 25,
+        "IT Manager - DB": 23,
+        "Shared Services Manager": 20,
+        "IT Manager - Support": 14,
+        "BI Director": 13,
+        "Sr. Accountant": 13,
+        "President & CEO": 12,
+        "Software Engineering Manager": 12,
+        "CIO": 11,
+        "IT Manager - Infra": 11,
+        "Director of Sales": 11,
+        "Director of Operations": 11,
+        "IT Director": 11,
+        "Data Analyst ": 9,
+        "Sr. DBA": 9,
+        "Principal Data Architect": 9,
+        "Data Architect": 5,
+        "Enterprise Architect": 5
+      },
+      "has_leading_trailing_space": true
+    },
+    {
+      "name": "Supervisor",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2952,
+      "unique_pct": 93.71,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Peter Oneill",
+        "Renee Mccormick",
+        "Crystal Walker",
+        "Rebekah Wright",
+        "Jason Kim"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "ADEmail",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2998,
+      "unique_pct": 95.17,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "uriah.bridges@bilearner.com",
+        "paula.small@bilearner.com",
+        "edward.buck@bilearner.com",
+        "michael.riordan@bilearner.com",
+        "jasmine.onque@bilearner.com"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "BusinessUnit",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 10,
+      "unique_pct": 0.32,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "CCDR",
+        "EW",
+        "PL",
+        "TNS",
+        "BPC"
+      ],
+      "numeric": null,
+      "categories": {
+        "SVG": 327,
+        "BPC": 321,
+        "EW": 318,
+        "NEL": 316,
+        "CCDR": 315,
+        "MSC": 314,
+        "PL": 313,
+        "PYZ": 312,
+        "WBL": 308,
+        "TNS": 306
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EmployeeStatus",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Active",
+        "Future Start",
+        "Voluntarily Terminated",
+        "Leave of Absence",
+        "Terminated for Cause"
+      ],
+      "numeric": null,
+      "categories": {
+        "Active": 2583,
+        "Voluntarily Terminated": 339,
+        "Leave of Absence": 89,
+        "Future Start": 70,
+        "Terminated for Cause": 69
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EmployeeType",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.1,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Contract",
+        "Full-Time",
+        "Part-Time"
+      ],
+      "numeric": null,
+      "categories": {
+        "Full-Time": 1086,
+        "Contract": 1055,
+        "Part-Time": 1009
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "PayZone",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.1,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Zone C",
+        "Zone A",
+        "Zone B"
+      ],
+      "numeric": null,
+      "categories": {
+        "Zone A": 1108,
+        "Zone B": 1030,
+        "Zone C": 1012
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "EmployeeClassificationType",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "unique_pct": 0.1,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Temporary",
+        "Part-Time",
+        "Full-Time"
+      ],
+      "numeric": null,
+      "categories": {
+        "Temporary": 1080,
+        "Full-Time": 1064,
+        "Part-Time": 1006
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "TerminationType",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Unk",
+        "Involuntary",
+        "Resignation",
+        "Retirement",
+        "Voluntary"
+      ],
+      "numeric": null,
+      "categories": {
+        "Unk": 1544,
+        "Voluntary": 409,
+        "Involuntary": 407,
+        "Resignation": 397,
+        "Retirement": 393
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "TerminationDescription",
+      "dtype": "object",
+      "non_null": 1606,
+      "missing": 1544,
+      "missing_pct": 49.02,
+      "unique": 1533,
+      "unique_pct": 48.67,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Me see picture nature degree benefit.",
+        "Blue community type skill story.",
+        "Summer personal bag.",
+        "Alone once than. More condition pay far.",
+        "Foot in theory minute recognize test."
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "DepartmentType",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 6,
+      "unique_pct": 0.19,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Production       ",
+        "Sales",
+        "IT/IS",
+        "Executive Office",
+        "Software Engineering"
+      ],
+      "numeric": null,
+      "categories": {
+        "Production       ": 2115,
+        "IT/IS": 459,
+        "Sales": 345,
+        "Software Engineering": 121,
+        "Admin Offices": 85,
+        "Executive Office": 25
+      },
+      "has_leading_trailing_space": true
+    },
+    {
+      "name": "Division",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 25,
+      "unique_pct": 0.79,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Finance & Accounting",
+        "Aerial",
+        "General - Sga",
+        "General - Con",
+        "Field Operations"
+      ],
+      "numeric": null,
+      "categories": {
+        "Field Operations": 826,
+        "General - Con": 528,
+        "Engineers": 292,
+        "Aerial": 210,
+        "Wireline Construction": 191,
+        "Project Management - Con": 189,
+        "General - Sga": 121,
+        "Splicing": 114,
+        "General - Eng": 91,
+        "Fielders": 86,
+        "Finance & Accounting": 75,
+        "Yard (Material Handling)": 64,
+        "Shop (Fleet)": 60,
+        "Catv": 59,
+        "Executive": 46,
+        "Wireless": 35,
+        "Underground": 33,
+        "Technology / It": 27,
+        "People Services": 26,
+        "Billable Consultants": 24,
+        "Project Management - Eng": 17,
+        "Isp": 16,
+        "Sales & Marketing": 9,
+        "Safety": 9,
+        "Corp Operations": 2
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "DOB",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2800,
+      "unique_pct": 88.89,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "07-10-1969",
+        "30-08-1965",
+        "06-10-1991",
+        "04-04-1998",
+        "29-08-1969"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "State",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 28,
+      "unique_pct": 0.89,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "MA",
+        "ND",
+        "FL",
+        "CT",
+        "CA"
+      ],
+      "numeric": null,
+      "categories": {
+        "MA": 2785,
+        "TX": 56,
+        "CT": 42,
+        "AZ": 33,
+        "ID": 32,
+        "KY": 28,
+        "TN": 24,
+        "CO": 24,
+        "WA": 22,
+        "IN": 15,
+        "PA": 13,
+        "NY": 11,
+        "AL": 11,
+        "CA": 10,
+        "OR": 10,
+        "NC": 5,
+        "ND": 5,
+        "VT": 4,
+        "RI": 4,
+        "GA": 3,
+        "UT": 2,
+        "VA": 2,
+        "NH": 2,
+        "NV": 2,
+        "ME": 2,
+        "MT": 1,
+        "OH": 1,
+        "FL": 1
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "JobFunctionDescription",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 83,
+      "unique_pct": 2.63,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Accounting",
+        "Labor",
+        "Assistant",
+        "Clerk",
+        "Laborer"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "GenderCode",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.06,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Female",
+        "Male"
+      ],
+      "numeric": null,
+      "categories": {
+        "Female": 1769,
+        "Male": 1381
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "LocationCode",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2821,
+      "unique_pct": 89.56,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        34904,
+        6593,
+        2330,
+        58782,
+        33174
+      ],
+      "numeric": {
+        "min": 1013.0,
+        "25%": 17616.5,
+        "50%": 44455.5,
+        "75%": 71713.25,
+        "max": 98052.0,
+        "mean": 45155.3327,
+        "std": 30019.4189
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "RaceDesc",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "White",
+        "Hispanic",
+        "Other",
+        "Black",
+        "Asian"
+      ],
+      "numeric": null,
+      "categories": {
+        "Asian": 656,
+        "Black": 643,
+        "White": 638,
+        "Other": 610,
+        "Hispanic": 603
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "MaritalDesc",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.13,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Widowed",
+        "Single",
+        "Married",
+        "Divorced"
+      ],
+      "numeric": null,
+      "categories": {
+        "Married": 812,
+        "Single": 807,
+        "Divorced": 773,
+        "Widowed": 758
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Performance Score",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.13,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Fully Meets",
+        "Exceeds",
+        "Needs Improvement",
+        "PIP"
+      ],
+      "numeric": null,
+      "categories": {
+        "Fully Meets": 2486,
+        "Exceeds": 383,
+        "Needs Improvement": 184,
+        "PIP": 97
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Current Employee Rating",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        4,
+        3,
+        2,
+        5,
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 3.0,
+        "max": 5.0,
+        "mean": 2.9683,
+        "std": 1.0207
+      },
+      "categories": {
+        "3": 1597,
+        "2": 529,
+        "4": 447,
+        "1": 293,
+        "5": 284
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Employee ID",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3000,
+      "unique_pct": 95.24,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        3427,
+        3428,
+        3429,
+        3430,
+        3431
+      ],
+      "numeric": {
+        "min": 1001.0,
+        "25%": 1750.25,
+        "50%": 2504.5,
+        "75%": 3254.75,
+        "max": 4000.0,
+        "mean": 2502.7483,
+        "std": 866.242
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Survey Date",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 366,
+      "unique_pct": 11.62,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "14-01-2023",
+        "09-09-2022",
+        "27-05-2023",
+        "16-06-2023",
+        "25-11-2022"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Engagement Score",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 5.0,
+        "mean": 2.9435,
+        "std": 1.4307
+      },
+      "categories": {
+        "1": 687,
+        "2": 644,
+        "4": 616,
+        "5": 612,
+        "3": 591
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Satisfaction Score",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        2,
+        1,
+        5,
+        3,
+        4
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 5.0,
+        "mean": 3.0213,
+        "std": 1.4074
+      },
+      "categories": {
+        "4": 673,
+        "3": 637,
+        "1": 623,
+        "5": 619,
+        "2": 598
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Work-Life Balance Score",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        3,
+        5,
+        1,
+        4,
+        2
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 5.0,
+        "mean": 2.9924,
+        "std": 1.4092
+      },
+      "categories": {
+        "3": 655,
+        "1": 630,
+        "2": 626,
+        "5": 623,
+        "4": 616
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Date",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 366,
+      "unique_pct": 11.62,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "15-Jul-23",
+        "12-Sep-22",
+        "13-Aug-22",
+        "15-Dec-22",
+        "13-Jul-23"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Program Name",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Leadership Development",
+        "Customer Service",
+        "Project Management",
+        "Technical Skills",
+        "Communication Skills"
+      ],
+      "numeric": null,
+      "categories": {
+        "Communication Skills": 705,
+        "Project Management": 638,
+        "Technical Skills": 614,
+        "Leadership Development": 599,
+        "Customer Service": 594
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Type",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.06,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Internal",
+        "External"
+      ],
+      "numeric": null,
+      "categories": {
+        "Internal": 1587,
+        "External": 1563
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Outcome",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 4,
+      "unique_pct": 0.13,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Failed",
+        "Incomplete",
+        "Completed",
+        "Passed"
+      ],
+      "numeric": null,
+      "categories": {
+        "Incomplete": 812,
+        "Completed": 801,
+        "Passed": 786,
+        "Failed": 751
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2738,
+      "unique_pct": 86.92,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "South Marisa",
+        "Tammieville",
+        "East Roberthaven",
+        "Garzatown",
+        "Lake Meganville"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Trainer",
+      "dtype": "object",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2942,
+      "unique_pct": 93.4,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Taylor Rodriguez",
+        "Kelly Patterson DDS",
+        "Taylor Thomas",
+        "Holly Elliott",
+        "Donald Martinez"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Duration(Days)",
+      "dtype": "int64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "unique_pct": 0.16,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        2,
+        4,
+        3,
+        5,
+        1
+      ],
+      "numeric": {
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 5.0,
+        "mean": 2.9717,
+        "std": 1.4154
+      },
+      "categories": {
+        "1": 647,
+        "3": 643,
+        "2": 638,
+        "5": 621,
+        "4": 601
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Training Cost",
+      "dtype": "float64",
+      "non_null": 3150,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2965,
+      "unique_pct": 94.13,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        606.11,
+        673.02,
+        413.28,
+        663.78,
+        399.03
+      ],
+      "numeric": {
+        "min": 100.04,
+        "25%": 331.475,
+        "50%": 574.3,
+        "75%": 788.07,
+        "max": 999.97,
+        "mean": 560.5259,
+        "std": 262.486
+      },
+      "categories": null,
+      "has_leading_trailing_space": false
+    }
+  ],
+  "source_sha256": "bf4ad534e6f9778f53679ebb3d52148e7d0c2540655c8139f1ddff462fef3eb8"
+}

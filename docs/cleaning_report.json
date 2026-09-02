@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-08-27T20:38:49.877207+00:00",
+  "run_id": "72e7b30d54d6",
+  "mode": "strict",
+  "stage": "processed",
+  "datasets": {
+    "employee_attrition_processed": {
+      "dataset": "employee_attrition_processed",
+      "schema": "employee_attrition_raw",
+      "rows": 1470,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "engagement_processed": {
+      "dataset": "engagement_processed",
+      "schema": "hr_performance_engagement_processed",
+      "rows": 3000,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    }
+  },
+  "artifacts": {
+    "employee_attrition_processed": {
+      "dataset": "employee_attrition_processed",
+      "rows": 1470,
+      "columns": 35,
+      "parquet": "employee_attrition_processed.parquet",
+      "content_sha256": "98bc89c3b3e2e50f3a4c7e7545970c4e11067057ff22f1770c94826c847d8ee8",
+      "csv": "employee_attrition_processed.csv"
+    },
+    "engagement_events_processed": {
+      "dataset": "engagement_events_processed",
+      "rows": 3150,
+      "columns": 36,
+      "parquet": "engagement_events_processed.parquet",
+      "content_sha256": "ab85c4e6b1c7b2400aa8e3d8badf1adf03caf815e6f69a766dd1e020dda9882b",
+      "csv": "engagement_events_processed.csv"
+    },
+    "engagement_processed": {
+      "dataset": "engagement_processed",
+      "rows": 3000,
+      "columns": 43,
+      "parquet": "engagement_processed.parquet",
+      "content_sha256": "b9f3beb43177c9a23f9b6e1e1d714461b8d0da614b1cb69253cb254621e8905a",
+      "csv": "engagement_processed.csv"
+    },
+    "occupation_master": {
+      "dataset": "occupation_master",
+      "rows": 1016,
+      "columns": 3,
+      "parquet": "occupation_master.parquet",
+      "content_sha256": "987b5d96663bc54e49a99498c6524acb137fea7da21938a377ee8095ba8968c2",
+      "csv": "occupation_master.csv"
+    },
+    "essential_skills_processed": {
+      "dataset": "essential_skills_processed",
+      "rows": 9079,
+      "columns": 5,
+      "parquet": "essential_skills_processed.parquet",
+      "content_sha256": "208a0125f0986d817dc4134bc732c025382112a57b39b28b5c332fa1a0573b96",
+      "csv": "essential_skills_processed.csv"
+    },
+    "software_skills_processed": {
+      "dataset": "software_skills_processed",
+      "rows": 31706,
+      "columns": 6,
+      "parquet": "software_skills_processed.parquet",
+      "content_sha256": "11d6dd50dff1bec800eb0b0a5253c8f86f8e8fbd6bd77ff1bed56954a0af1dba",
+      "csv": "software_skills_processed.csv"
+    }
+  }
+}

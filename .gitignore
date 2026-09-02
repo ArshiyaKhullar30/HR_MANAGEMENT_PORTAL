@@ -1,0 +1,43 @@
+# --- data: never committed (PII + size) ---
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+data/predictions/*
+!data/**/.gitkeep
+
+# --- models & experiment tracking ---
+models/**
+!models/.gitkeep
+mlruns/
+mlartifacts/
+mlflow.db
+
+# --- secrets ---
+.env
+.env.*
+!.env.example
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# --- tooling caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# --- os / editor ---
+.DS_Store
+.idea/
+.vscode/

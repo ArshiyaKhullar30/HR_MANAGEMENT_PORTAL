@@ -1,0 +1,165 @@
+{
+  "version": "latest",
+  "top_features": [
+    {
+      "feature": "JobRole",
+      "label": "JobRole",
+      "importance": 0.9397,
+      "direction_correlation": 0.0524,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "OverTime",
+      "label": "OverTime",
+      "importance": 0.72546,
+      "direction_correlation": -0.0806,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "TenureInRoleRatio",
+      "label": "TenureInRoleRatio",
+      "importance": 0.53987,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "YearsAtCompany",
+      "label": "YearsAtCompany",
+      "importance": 0.51688,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "YearsInCurrentRole",
+      "label": "YearsInCurrentRole",
+      "importance": 0.46724,
+      "direction_correlation": 1.0,
+      "is_categorical": false,
+      "direction": "higher value increases risk"
+    },
+    {
+      "feature": "BusinessTravel",
+      "label": "BusinessTravel",
+      "importance": 0.44794,
+      "direction_correlation": 0.3151,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "TotalWorkingYears",
+      "label": "TotalWorkingYears",
+      "importance": 0.44203,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "MaritalStatus",
+      "label": "MaritalStatus",
+      "importance": 0.4299,
+      "direction_correlation": -0.0442,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "NumCompaniesWorked",
+      "label": "NumCompaniesWorked",
+      "importance": 0.42538,
+      "direction_correlation": 1.0,
+      "is_categorical": false,
+      "direction": "higher value increases risk"
+    },
+    {
+      "feature": "EducationField",
+      "label": "EducationField",
+      "importance": 0.35878,
+      "direction_correlation": -0.524,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "JobLevel",
+      "label": "JobLevel",
+      "importance": 0.35551,
+      "direction_correlation": 1.0,
+      "is_categorical": false,
+      "direction": "higher value increases risk"
+    },
+    {
+      "feature": "Department",
+      "label": "Department",
+      "importance": 0.30218,
+      "direction_correlation": 0.0126,
+      "is_categorical": true,
+      "direction": "varies by category"
+    },
+    {
+      "feature": "IncomePerYearAtCompany",
+      "label": "IncomePerYearAtCompany",
+      "importance": 0.27778,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "DistanceFromHome",
+      "label": "DistanceFromHome",
+      "importance": 0.27762,
+      "direction_correlation": 1.0,
+      "is_categorical": false,
+      "direction": "higher value increases risk"
+    },
+    {
+      "feature": "ManagerStability",
+      "label": "ManagerStability",
+      "importance": 0.26386,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "SatisfactionIndex",
+      "label": "SatisfactionIndex",
+      "importance": 0.25536,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "EnvironmentSatisfaction",
+      "label": "EnvironmentSatisfaction",
+      "importance": 0.25519,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "YearsSinceLastPromotion",
+      "label": "YearsSinceLastPromotion",
+      "importance": 0.25034,
+      "direction_correlation": 1.0,
+      "is_categorical": false,
+      "direction": "higher value increases risk"
+    },
+    {
+      "feature": "JobInvolvement",
+      "label": "JobInvolvement",
+      "importance": 0.24054,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    },
+    {
+      "feature": "Age",
+      "label": "Age",
+      "importance": 0.21624,
+      "direction_correlation": -1.0,
+      "is_categorical": false,
+      "direction": "higher value reduces risk"
+    }
+  ]
+}

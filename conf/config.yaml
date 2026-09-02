@@ -1,0 +1,310 @@
+# ============================================================================
+# Enterprise HR AI — single source of truth for paths, contracts and thresholds
+# No module under src/ or app/ may hard-code a path, threshold or seed.
+# ============================================================================
+
+project:
+  name: enterprise_hr_ai
+  version: "0.1.0"
+
+# --- determinism contract (Phase 0.6) ------------------------------------
+# One seed, threaded through every split, model and derived-data generator.
+# Same inputs must always produce byte-identical outputs.
+random_seed: 42
+
+paths:
+  root: "."
+  data:
+    raw: "data/raw"
+    interim: "data/interim"
+    processed: "data/processed"
+    external: "data/external"
+    predictions: "data/predictions"
+  models: "models"
+  conf: "conf"
+  docs: "docs"
+  notebooks: "notebooks"
+
+# --- the five permitted source datasets ----------------------------------
+# Scope rule: nothing outside this list may be read as a data source.
+datasets:
+  employee_attrition:
+    file: "employee_attrition.csv"
+    encoding: "utf-8-sig"          # file carries a BOM
+    population: A
+    primary_key: EmployeeNumber
+    expected_rows: 1470
+    label: Attrition
+  hr_performance_engagement:
+    file: "hr_performance_engagement.csv"
+    encoding: "utf-8"
+    population: B
+    primary_key: "Employee ID"
+    expected_rows: 3150            # NOT the employee count — see grain, F5
+    grain: "employee x survey/training event"
+    distinct_employees: 3000
+    label_derived_from: EmployeeStatus
+  occupation_data:
+    file: "occupation_data.csv"
+    encoding: "utf-8"
+    role: reference
+    primary_key: "O*NET-SOC Code"
+    expected_rows: 1016
+  essential_skills:
+    file: "essential_skills.csv"
+    encoding: "utf-8"
+    role: reference
+    tier: foundational             # F2: O*NET Basic Skills, 10 cognitive skills
+    foreign_key: "O*NET-SOC Code"
+    expected_rows: 18200
+    scales: [IM, LV]               # Importance 1-5, Level 1-7
+  software_skills:
+    file: "software_skills.csv"
+    encoding: "utf-8"
+    role: reference
+    tier: technical                # F2: 8,753 tools across 134 categories
+    foreign_key: "O*NET-SOC Code"
+    expected_rows: 31821
+
+# ==========================================================================
+# ARCHITECTURAL INVARIANT (finding F1 / risk R1)
+# --------------------------------------------------------------------------
+# employee_attrition and hr_performance_engagement are DIFFERENT COMPANIES.
+# The 753 overlapping IDs are numeric coincidence: on those rows gender agrees
+# 48.6% (a coin flip) and age agrees 6.0%.
+# The archive/ candidates were tested too (F8) and are equally unrelated.
+# The two populations are bridged ONLY by the role -> O*NET skill ontology.
+# A CI check enforces this; see tests/unit/test_no_cross_population_join.py
+# ==========================================================================
+invariants:
+  forbid_cross_population_employee_join: true
+  populations:
+    A: employee_attrition
+    B: hr_performance_engagement
+
+# --- validation rules (Step 02) ------------------------------------------
+validation:
+  mode: strict                     # strict = fail pipeline | report = log and continue
+  attrition:
+    age_range: [18, 100]
+    attrition_values: ["Yes", "No"]
+    unique_key: true
+    constant_columns_to_drop: [EmployeeCount, Over18, StandardHours]
+  engagement:
+    # F6: these are 1-5 Likert scales, NOT 0-100. The Build Notes' 0-100 rule
+    # would pass every row and catch nothing.
+    likert_range: [1, 5]
+    likert_columns:
+      - "Engagement Score"
+      - "Satisfaction Score"
+      - "Work-Life Balance Score"
+      - "Current Employee Rating"
+    terminated_statuses: ["Voluntarily Terminated", "Terminated for Cause"]
+    # F6: 1,198 rows have an ExitDate while status is Active/Future Start/LoA
+    rule_exit_date_implies_terminated: true
+    date_columns: [StartDate, ExitDate, DOB, "Survey Date", "Training Date"]
+    date_formats: ["%d-%b-%y", "%d-%m-%Y", "%Y-%m-%d"]
+
+# --- PII handling (Step 03) ----------------------------------------------
+pii:
+  drop_columns:
+    hr_performance_engagement: [FirstName, LastName, ADEmail, Supervisor]
+  strip_notebook_outputs: true     # enforced by nbstripout in pre-commit
+
+# --- leakage register (finding F7) ---------------------------------------
+# Columns that ARE the label. Blocked at schema level, never by memory.
+leakage:
+  hr_performance_engagement:
+    - ExitDate
+    - TerminationType
+    - TerminationDescription
+    - EmployeeStatus
+  employee_attrition:
+    - Attrition
+  never_features:
+    - EmployeeNumber
+    - "Employee ID"
+
+# --- feature engineering (Step 05) ---------------------------------------
+features:
+  engineered:
+    - name: IncomePerYearAtCompany
+      rationale: "Pay progression relative to tenure; flat pay over long tenure is a known driver."
+    - name: PromotionGap
+      rationale: "YearsSinceLastPromotion / YearsAtCompany — stagnation signal normalised by tenure."
+    - name: SatisfactionIndex
+      rationale: "Mean of Job/Environment/Relationship satisfaction — a single stable morale construct."
+    - name: ExperienceRatio
+      rationale: "YearsAtCompany / TotalWorkingYears — company loyalty vs overall career mobility."
+    - name: TenureInRoleRatio
+      rationale: "YearsInCurrentRole / YearsAtCompany — internal mobility; low mobility drives exits."
+    - name: ManagerStability
+      rationale: "YearsWithCurrManager / YearsAtCompany — manager churn is a documented attrition driver."
+  # Subset shared with Population B, used for cross-population transfer.
+  # Deliberately short. A feature earns a place here only if its SEMANTICS
+  # genuinely transfer, not merely its column name:
+  #   - Department / JobRole  EXCLUDED: vocabularies are disjoint (only "Sales"
+  #     is shared across 3 vs 6 departments; 0 of 9 vs 31 job titles overlap).
+  #     One-hot with handle_unknown="ignore" would zero them out silently, which
+  #     degrades the model while looking like it worked.
+  #   - PerformanceRating     EXCLUDED: Population A only ever takes {3, 4}, so
+  #     there is no variation to learn from and nothing to transfer.
+  common_feature_contract:
+    - Age
+    - Gender
+    - YearsAtCompany
+    - JobSatisfaction
+    - WorkLifeBalance
+  # Population B's Likert columns are 1-5; Population A's are 1-4.
+  transfer_likert_rescale:
+    from_range: [1, 5]
+    to_range: [1, 4]
+
+# --- model training (Steps 06-09) ----------------------------------------
+model:
+  target: Attrition
+  positive_class: "Yes"
+  test_size: 0.2
+  cv_folds: 5
+  # F/R4: only 237 positives — a single split is too high-variance to compare on
+  cv_repeats: 3
+  scoring: [precision, recall, f1, roc_auc, average_precision, neg_brier_score]
+  candidates: [logistic_regression, random_forest, xgboost]
+  class_balance: class_weight      # class_weight | scale_pos_weight
+  calibration:
+    enabled: true
+    method: isotonic
+    # Step 16 buckets probabilities into bands, so they must be correct,
+    # not merely correctly ranked.
+  risk_bands:
+    high: 0.60
+    medium: 0.30
+  # Threshold is chosen by expected cost, not by reading the top of a column.
+  cost_sensitive:
+    # Both costs are multiples of the employee's own MONTHLY income, so they
+    # scale with seniority: losing a senior engineer costs more than losing a
+    # junior one, and retaining them costs more too. A single global constant
+    # would hide that.
+    false_negative_cost_multiple: 6.0   # replacement cost ~ 6x monthly salary
+    false_positive_cost_multiple: 0.25  # one unnecessary retention intervention
+    currency: INR
+    # The model is a screening tool: with a ~24:1 cost asymmetry the optimal
+    # threshold is necessarily low and precision is necessarily modest. The
+    # capacity view below is what makes the output actionable for a real team.
+    hr_review_capacity_pct: 0.20        # share of headcount HR can realistically review
+
+# --- role -> O*NET crosswalk (Step 11, WOW A) ----------------------------
+crosswalk:
+  # F4: 0 of 9 and 0 of 32 role titles match O*NET exactly. A crosswalk is
+  # mandatory, not optional.
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  top_k: 5
+  auto_accept_threshold: 0.75
+  review_required_below: 0.75
+  reviewed_file: "conf/role_crosswalk_reviewed.yaml"
+  total_roles_to_review: 40        # 9 attrition + 31 engagement (after whitespace normalisation)
+
+# --- skills + gap engine (Steps 12-14) -----------------------------------
+skills:
+  derived_employee_skills: true    # F3: no employee-skill data exists in any file
+  derived_flag_column: is_derived  # every row carries this; never shown as fact
+  foundational:
+    importance_scale: IM
+    level_scale: LV
+    gap_weighting: importance
+  technical:
+    weight_hot_technology: 1.5
+    weight_in_demand: 2.0
+  # Build Notes used absolute counts (100+/50+). Converted to percentage bands
+  # so severity stays meaningful as headcount changes.
+  org_gap_severity:
+    high_pct: 0.25
+    medium_pct: 0.10
+
+# --- retention ROI copilot (WOW C) ---------------------------------------
+retention_roi:
+  enabled: true
+  currency: INR
+  replacement_cost_monthly_multiple: 6.0
+  # Protected attributes are NEVER levers. Enforced in code, not convention.
+  protected_attributes: [Age, Gender, MaritalStatus, Over18]
+  # Each lever carries its annual cost. Costs are expressed as a multiple of the
+  # employee's own MONTHLY income so they scale with seniority, matching how the
+  # replacement-cost benefit is calculated. `cost_absolute` overrides the
+  # multiple where a real price exists in the data (training).
+  levers:
+    - name: reduce_overtime
+      label: Remove mandatory overtime
+      feature: OverTime
+      set: "No"
+      cost_multiple_monthly: 1.2      # ~10% FTE of backfill capacity for a year
+      rationale: "Backfilling the hours the employee no longer works."
+    - name: work_life_balance
+      label: Work-life balance programme
+      feature: WorkLifeBalance
+      delta: 1
+      max: 4
+      cost_multiple_monthly: 0.5      # flexible-working / workload programme
+      rationale: "Flexible working, workload rebalancing, manager coaching."
+    - name: targeted_training
+      label: Targeted upskilling
+      feature: TrainingTimesLastYear
+      delta: 1
+      max: 6
+      cost_absolute: null             # filled from the real course catalogue
+      rationale: "Priced from observed Training Cost in the engagement data."
+    - name: promotion
+      label: Promotion
+      feature: YearsSinceLastPromotion
+      set: 0
+      cost_multiple_monthly: 1.8      # ~15% band uplift, annualised
+      rationale: "Salary band uplift carried for a year."
+    - name: compensation
+      label: Compensation increase
+      feature: MonthlyIncome
+      pct: 0.10
+      cost_multiple_monthly: 1.2      # 10% of salary, annualised
+      rationale: "A 10% raise costs 1.2 months of salary over a year."
+    - name: equity
+      label: Additional stock options
+      feature: StockOptionLevel
+      delta: 1
+      max: 3
+      cost_multiple_monthly: 0.6
+      rationale: "One additional stock option band."
+  max_levers_per_employee: 2
+
+# --- api (Steps 18-21) ----------------------------------------------------
+api:
+  title: "Enterprise HR AI"
+  version: "v1"
+  prefix: "/api/v1"
+  host: "0.0.0.0"
+  port: 8000
+  # Model is loaded ONCE in the lifespan handler, never per request.
+  preload_model: true
+
+# --- logging (Steps 20-21) -----------------------------------------------
+logging:
+  level: INFO
+  format: json
+  prediction_log:
+    enabled: true
+    path: "data/predictions"
+    partition_by: date
+
+# --- drift monitoring (Step 25) ------------------------------------------
+monitoring:
+  drift_features: [Age, MonthlyIncome, YearsAtCompany, JobSatisfaction, OverTime]
+  psi_threshold: 0.20
+  ks_pvalue_threshold: 0.05
+  retrain_triggers:
+    drift_psi_above: 0.20
+    # F1 is judged against the model's OWN validated baseline, not an absolute
+    # number. This model's F1 ceiling is ~0.40 by design: the operating threshold
+    # is deliberately low because a missed leaver costs ~24x an unnecessary
+    # conversation, which buys recall at the cost of precision. An absolute floor
+    # of 0.70 would fire on every single run and train the team to ignore it.
+    f1_relative_drop: 0.15        # retrain if F1 falls >15% below baseline
+    f1_absolute_floor: 0.20       # backstop for outright collapse
+    months_of_new_data: 6

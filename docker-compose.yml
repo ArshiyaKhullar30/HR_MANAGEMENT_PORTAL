@@ -1,0 +1,60 @@
+# Enterprise HR AI — local stack (Step 24)
+#
+#   docker compose up --build
+#     API        http://localhost:8000/docs
+#     Dashboard  http://localhost:8501
+#
+# `data/` and `models/` are bind-mounted rather than copied into the image:
+# employee data must not live in a distributable artifact, and the model is
+# retrained far more often than the code changes.
+
+services:
+  api:
+    build:
+      context: .
+      target: runtime
+    image: enterprise-hr-ai:latest
+    container_name: hrai-api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      HRAI_LOG_LEVEL: INFO
+      MLFLOW_TRACKING_URI: sqlite:////app/data/mlflow.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./docs:/app/docs
+      - hf-cache:/app/.cache/huggingface
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  dashboard:
+    image: enterprise-hr-ai:latest
+    container_name: hrai-dashboard
+    command: >
+      streamlit run frontend/Home.py
+      --server.port 8501
+      --server.address 0.0.0.0
+      --server.headless true
+    ports:
+      - "8501:8501"
+    environment:
+      # Service name, not localhost — inside the network the API is `api`.
+      HRAI_API_URL: http://api:8000
+    depends_on:
+      api:
+        # Wait for the model to finish loading, not merely for the process to exist.
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
+
+volumes:
+  hf-cache:

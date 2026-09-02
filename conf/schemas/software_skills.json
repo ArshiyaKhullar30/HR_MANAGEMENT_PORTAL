@@ -1,0 +1,162 @@
+{
+  "name": "software_skills",
+  "rows": 31821,
+  "columns": 7,
+  "duplicate_rows": 0,
+  "total_missing_cells": 0,
+  "constant_columns": [],
+  "candidate_keys": [],
+  "id_like_columns": [
+    "Element ID"
+  ],
+  "columns_detail": [
+    {
+      "name": "O*NET-SOC Code",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 923,
+      "unique_pct": 2.9,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "11-1011.00",
+        "11-1011.03",
+        "11-1021.00",
+        "11-1031.00",
+        "11-2011.00"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Title",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 923,
+      "unique_pct": 2.9,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Chief Executives",
+        "Chief Sustainability Officers",
+        "General and Operations Managers",
+        "Legislators",
+        "Advertising and Promotions Managers"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Workplace Example",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 8753,
+      "unique_pct": 27.51,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Adobe Acrobat",
+        "AdSense Tracker",
+        "Atlassian JIRA",
+        "Blackbaud The Raiser's Edge",
+        "ComputerEase construction accounting software"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Element ID",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 134,
+      "unique_pct": 0.42,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "2.E.5.b",
+        "2.E.6.f",
+        "2.E.5.a",
+        "2.E.6.c",
+        "2.E.2.a"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Element Name",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 134,
+      "unique_pct": 0.42,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Document management software",
+        "Data base user interface and query software",
+        "Content workflow software",
+        "Customer relationship management CRM software",
+        "Accounting software"
+      ],
+      "numeric": null,
+      "categories": null,
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "Hot Technology",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.01,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "Y",
+        "N"
+      ],
+      "numeric": null,
+      "categories": {
+        "N": 20250,
+        "Y": 11571
+      },
+      "has_leading_trailing_space": false
+    },
+    {
+      "name": "In Demand",
+      "dtype": "object",
+      "non_null": 31821,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "unique_pct": 0.01,
+      "is_constant": false,
+      "is_candidate_key": false,
+      "sample_values": [
+        "N",
+        "Y"
+      ],
+      "numeric": null,
+      "categories": {
+        "N": 29396,
+        "Y": 2425
+      },
+      "has_leading_trailing_space": false
+    }
+  ],
+  "source_sha256": "6aabb96b464288db849580e6510530efff3f80e25dde2bb23f1fc36bb526b016"
+}

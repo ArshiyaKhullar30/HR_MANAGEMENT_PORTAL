@@ -1,0 +1,30 @@
+# Data and models are mounted as volumes, never baked into the image:
+# they carry employee PII and would make the image enormous.
+data/
+models/
+mlruns/
+mlflow.db
+
+.git/
+.github/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+notebooks/
+archive/
+docs/*.html
+.ipynb_checkpoints/
+
+.env
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
